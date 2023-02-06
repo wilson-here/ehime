@@ -1,0 +1,202 @@
+{
+  "linklists": {
+    "main": [
+      {
+        "title": "企業一覧",
+        "url": "./contact.html"
+      },
+      {
+        "title": "愛媛シゴト図鑑とは",
+        "url": "./about.html"
+      },
+      {
+        "title": "インタビュー",
+        "url": "./"
+      },
+      {
+        "title": "ニュース",
+        "url": "./"
+      }
+    ]
+  },
+  "companies": [
+    {
+      "id": 1,
+      "heading": "株式会社悠遊社",
+      "subheading": "愛媛県松山市",
+      "description": "「とてもやりがいのある仕事です。<br class='is-notdisplay--fr1200down'>若い人こそ飛び込んで来てください。」",
+      "label": "介護・福祉"
+    },
+    {
+      "id": 2,
+      "heading": "やまと印刷株式会社",
+      "subheading": "愛媛県四国中央市",
+      "description": "やりたいことを汲んでくれるから<br class='is-notdisplay--fr1200down'>精一杯いろいろなことに挑戦できる",
+      "label": "印刷"
+    },
+    {
+      "id": 3,
+      "heading": "北辰会グループ",
+      "subheading": "愛媛県西条市",
+      "description": "コミュニケーションでつながり深める<br class='is-notdisplay--fr1200down'>「気づき」を成長の原動力に",
+      "label": "介護・福祉"
+    },
+    {
+      "id": 4,
+      "heading": "株式会社フロントエンド",
+      "subheading": "愛媛県四国中央市",
+      "description": "その会社で何をするのかより、<br class='is-notdisplay--fr1200down'>誰と一緒に働きたいかで選んだ",
+      "label": "ソフトウェア"
+    },
+    {
+      "id": 5,
+      "heading": "株式会社フジ",
+      "subheading": "愛媛県松山市",
+      "description": "採用担当に積極的にアプローチ<br class='is-notdisplay--fr1200down'>第一志望入社を叶え、現場で活躍中",
+      "label": "スーパーマーケット"
+    },
+    {
+      "id": 6,
+      "heading": "株式会社フジファミリーフーズ",
+      "subheading": "愛媛県松山市",
+      "description": "お客様が満足するサービス提供を<br class='is-notdisplay--fr1200down'>目指しスタッフ全員が連携し、<br class='is-notdisplay--fr1200down'>臨機応変な対応を",
+      "label": "外食"
+    }
+  ],
+  "news": [
+    {
+      "id": 1,
+      "date": "2019.03.08",
+      "datetime": "2019-03-08",
+      "newsheading": "2020年「新卒会社説明会」日程について"
+    },
+    {
+      "id": 2,
+      "date": "2019.03.07",
+      "datetime": "2019-03-07",
+      "newsheading": "愛work Challenge！2020 合同会社説明会について"
+    },
+    {
+      "id": 3,
+      "date": "2019.03.06",
+      "datetime": "2019-03-06",
+      "newsheading": "八幡浜みなっと みなと交流館館長の経営者インタビューを更新しました"
+    },
+    {
+      "id": 4,
+      "date": "2018.10.15",
+      "datetime": "2018-10-15",
+      "newsheading": "新しい社員インタビューを更新しました"
+    },
+    {
+      "id": 5,
+      "date": "2018.10.15",
+      "datetime": "2018-10-15",
+      "newsheading": "新しい社員インタビューを更新しました"
+    }
+  ],
+  "briefs": [
+    {
+      "id": 1,
+      "title": "愛媛シゴト図鑑とは",
+      "description": "愛媛シゴト図鑑は、「仕事選びの不安を無くす」をコンセプトに「自分がやりたいことが分からない」「どの企業に応募しようか迷う」「自分の人生と向き合って仕事を探したい」そんな方の一人ひとりが自分に合った働き方ができるよう応援しています。<br>企業の中身が見えなくて不安を感じ、自分が入社した後の想像がつかない学生さん。実際に働かれている方のインタビューを通して、会社の雰囲気、働くことの喜びを感じとってください。会社のいいところだけでなく、大変なところや働く人の思い、葛藤なども紹介しています。そのため、必ず職場を訪ねて、本音を引き出す独自の取材を行っています。"
+    },
+    {
+      "id": 2,
+      "title": "わたしたちについて",
+      "description": "これまで45年に渡り、愛媛の経済情報を専門に取材し、週刊愛媛経済レポートを発行してきました。その中で、愛媛にあるたくさんの素晴らしい企業の皆様にお会いしました。わたしたちは愛媛には社員を幸せにしている会社が多くあり、そして働くことは辛いばかりじゃなく、わたしたちの人生の価値を高めてくれるものと感じています。県内企業を見続けてきた記者ならではの視点で、今日もいろいろな職場を訪ねて、お話を聞いています。"
+    }
+  ],
+  "infos": [
+    {
+      "id": 1,
+      "heading": "社名",
+      "description": "株式会社　愛媛経済レポート"
+    },
+    {
+      "id": 2,
+      "heading": "設立日",
+      "description": "昭和48年9月6日"
+    },
+    {
+      "id": 3,
+      "heading": "資本金",
+      "description": "1000万円"
+    },
+    {
+      "id": 4,
+      "heading": "決算期",
+      "description": "8月"
+    },
+    {
+      "id": 5,
+      "heading": "本社所在地",
+      "description": "<p>愛媛県松山市千舟町4丁目5-4　松山千舟454ビル5F</p><p>TEL：<a href='tel:089-947-1411'>089-947-1411</a>　 FAX：089-947-1895</p>"
+    },
+    {
+      "id": 6,
+      "heading": "事業内容",
+      "description": "週間愛媛経済レポート、愛媛の会社年鑑、 えひめ業界地図等の発行"
+    },
+    {
+      "id": 7,
+      "heading": "沿革",
+      "description": "<p>昭和48年11月1日旬刊紙（月3回）で発行</p><p>同49年2月20日第三種郵便物許可</p><p>同56年9月1日週刊紙に移行（年間50回発行）</p>"
+    },
+    {
+      "id": 8,
+      "heading": "HP",
+      "description": "<a class='c-table__weblink' href='http://www.example.co.jp/'>http://www.example.co.jp/</a>"
+    },
+    {
+      "id": 9,
+      "heading": "Mail",
+      "description": "<a class='c-table__mailaddress' href='mailto:example@gmail.com'>example@gmail.com</a>"
+    }
+  ],
+  "formfields": [
+    {
+      "id": 1,
+      "heading": "氏名",
+      "name": "name",
+      "obligatory": "yes"
+    },
+    {
+      "id": 2,
+      "heading": "会社・学校名",
+      "name": "company",
+      "required": "no"
+    },
+    {
+      "id": 3,
+      "heading": "住所",
+      "name": "address",
+      "required": "no"
+    },
+    {
+      "id": 4,
+      "heading": "電話番号",
+      "name": "phone",
+      "required": "yes"
+    },
+
+    {
+      "id": 5,
+      "heading": "メールアドレス",
+      "name": "mail",
+      "required": "yes"
+    },
+    {
+      "id": 6,
+      "heading": "本サイトを知ったきっかけ",
+      "name": "howyouknow",
+      "required": "no"
+    },
+    {
+      "id": 7,
+      "heading": "お問い合わせ内容",
+      "name": "inquiry",
+      "required": "yes"
+    }
+  ]
+}

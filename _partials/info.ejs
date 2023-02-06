@@ -1,0 +1,30 @@
+<section class="c-info ">
+    <div class="c-info__contentwrapper l-container l-container--780px">
+        <div class="c-info__headingwrapper">
+
+            <h2 class="c-sechead c-sechead--info">
+                運営会社
+            </h2>
+            <div class="c-info__quoteiconwrapper">
+                <img class="c-info__quoteicon" src="./assets/img/quote-open.png" alt="運営会社">
+            </div>
+            <div class="c-info__quoteiconwrapper">
+                <img class="c-info__quoteicon" src="./assets/img/quote-close.png" alt="運営会社">
+            </div>
+        </div>
+        <div class="c-table c-table--info">
+            <table class="c-table__content is-palt">
+                <% infos.forEach(info=>{ %>
+                    <tr class="c-table__row c-table__row--info">
+                        <th class="c-table__header">
+                            <%= info.heading %>
+                        </th>
+                        <td class="c-table__cell c-table__cell--info">
+                            <%- info.description %>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </table>
+        </div>
+    </div>
+</section>

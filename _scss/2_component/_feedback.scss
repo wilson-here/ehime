@@ -1,0 +1,64 @@
+.c-feedback {
+  .c-feedback__contentwrapper {
+  }
+
+  .c-feedback__heading {
+    text-align: center;
+  }
+
+  .c-feedback__descr {
+    font-size: 1.4rem;
+
+    &--green {
+      font-weight: 700;
+      color: $secondary-color;
+    }
+
+    &--red {
+      color: #fd0000;
+      font-size: 1.4rem;
+    }
+  }
+
+  .c-feedback__pleasecheck {
+    font-size: 1.4rem;
+    color: #f00;
+  }
+
+  .c-feedback__form {
+  }
+
+  .c-feedback__required {
+    font-family: $secondary-fonts;
+    color: #f00;
+    font-weight: 400;
+  }
+
+  .c-feedback__pleaseenter {
+    font-size: 1.4rem;
+    color: #f00;
+    display: none;
+  }
+
+  .c-feedback__labelcheckbox {
+    font-weight: 700;
+  }
+
+  .c-feedback__checkboxdefault {
+  }
+
+  .c-feedback__checkboxcustom {
+  }
+
+  .c-feedback__inputtxt {
+    border: none;
+    background: #f2f2f2;
+    width: 100%;
+    padding: 0;
+    height: 100%;
+  }
+
+  .c-feedback__headertxt {
+    display: block;
+  }
+}

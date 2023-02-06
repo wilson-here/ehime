@@ -1,0 +1,41 @@
+.c-info {
+    color: $almost-black;
+    // padding: 151px 50px 100px;
+    padding: 7.9% 50px 100px;
+    @include sp {
+        padding: 50px 15px 100px;
+    }
+
+    .l-container--780px {
+        @include sp {
+            max-width: 580px;
+        }
+    }
+
+    .c-info__headingwrapper {
+        position: relative;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .c-info__quoteiconwrapper {
+        position: absolute;
+        background-color: #fff;
+
+        &:nth-child(2) {
+            left: 8px;
+            top: -16px;
+            padding-right: 15px;
+        }
+
+        &:nth-child(3) {
+            right: -3px;
+            bottom: -16px;
+            padding: 0 15px;
+        }
+    }
+
+    .c-info__quoteicon {
+        width: 35px;
+    }
+}

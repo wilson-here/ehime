@@ -1,0 +1,21 @@
+<section class="c-brief l-container">
+    <% briefs.forEach(brief=> { %>
+        <div class="c-brief__wrapper">
+            <div class="c-brief__text">
+                <h2 class="c-brief__textheading">
+                    <%= brief.title%>
+                </h2>
+                <p class="c-brief__textdescription">
+                    <%- brief.description%>
+                </p>
+            </div>
+            <div class="c-brief__imgwrapper">
+                <picture>
+                    <source media="(max-width: 767px)" srcset="./assets/img/brief/brief<%= brief.id %>--sp.jpg">
+                    <img src="./assets/img/brief/brief<%= brief.id %>.jpg" alt="<%= brief.title%>" class="c-brief__img">
+                </picture>
+            </div>
+        </div>
+        <% });%>
+
+</section>

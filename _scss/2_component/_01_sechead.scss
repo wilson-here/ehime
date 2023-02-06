@@ -1,0 +1,42 @@
+.c-sechead {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    border: solid 2px $main-color;
+    height: 95px;
+    border-radius: 3px;
+    font-size: 2.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &--news {
+        border: none;
+        margin: 0 auto;
+    }
+
+    &--info {
+        border: solid 3px $almost-black;
+        border-left: none;
+        border-right: none;
+        height: 70px;
+        max-width: 480px;
+        border-radius: 0;
+    }
+
+    @include sp {
+        height: 72px;
+        width: calc(100% - 20px);
+        font-size: 1.6rem;
+    }
+
+    .c-sechead__eng {
+        font-size: 2rem;
+        color: $secondary-color;
+        display: block;
+        @include sp {
+            font-size: 1.4rem;
+        }
+    }
+}

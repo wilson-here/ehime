@@ -1,0 +1,136 @@
+.c-overview {
+    margin-top: 40px;
+    padding: 10px 50px;
+    background-color: #f8b616;
+
+    @include tab {
+        padding: 10px 0 45px;
+        // height: auto;
+    }
+    @include sp {
+        margin-top: 37px;
+    }
+
+    .c-overview__content {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        max-width: 1416px;
+
+        @include tab {
+            flex-wrap: wrap;
+            // flex-direction: column;
+        }
+    }
+
+    .c-overview__illuheadingbtn {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        flex: 1;
+        justify-content: flex-end;
+        margin-bottom: 42px;
+        padding: 0 calc(8% - 72px);
+        @include fr1200down {
+            padding: 0 16px;
+        }
+        @include tab {
+            flex: 1 0 100%;
+            order: 1;
+        }
+        @include sp {
+            margin-bottom: 21px;
+        }
+    }
+
+    .c-overview__illuwrapper {
+        position: absolute;
+        // width: 639px;
+        width: 119.3%;
+        top: -75px;
+        @include tab {
+            width: 100%;
+            text-align: center;
+            padding: 0 20px;
+        }
+        @include sp {
+            top: -43px;
+        }
+    }
+
+    .c-overview__illu {
+        @include tab {
+            width: 639px;
+        }
+        @include sp {
+            width: 243px;
+        }
+    }
+
+    .c-overview__heading {
+        font-weight: 400;
+        font-size: 1.7rem;
+        text-align: center;
+        @include fr1200down {
+            font-size: 1.5rem;
+        }
+        @include tab {
+            padding: 0 20px;
+            margin-top: 190px;
+        }
+        @include sp {
+            font-weight: 500;
+            font-size: 1.3rem;
+            margin-top: 77px;
+            padding: 0;
+        }
+    }
+
+    .c-overview__btnwrapper {
+        @include tab {
+            order: 4;
+        }
+    }
+
+    .c-overview__imgwrapper {
+        width: calc(31.1%);
+        @include tab {
+            width: 50%;
+        }
+
+        &:nth-child(2) {
+            order: 1;
+            @include tab {
+                order: 3;
+            }
+        }
+
+        &:nth-child(3) {
+            order: 3;
+            @include tab {
+                order: 4;
+            }
+        }
+    }
+
+    .c-overview__img {
+        // object-fit: cover;
+        // height: 100%;
+        @include tab {
+            width: 100%;
+        }
+    }
+
+    .c-overview__imgwrapper {
+    }
+
+    .c-overview__img {
+    }
+}
+
+// c-secbtn__wrapper
+// c-secbtn
+// c-secbtn__text
+// c-secbtn__icon

@@ -1,0 +1,114 @@
+.c-table {
+    margin-top: 12px;
+
+    &--info {
+        margin-top: 72px;
+        @include sp {
+            margin-top: 42px;
+        }
+
+        &--feedback {
+        }
+    }
+
+    .c-table__content {
+        border-collapse: collapse;
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    .c-table__row {
+        display: flex;
+        align-items: flex-start;
+        border-bottom: solid 1px #ccc;
+
+        &:nth-child(1) {
+            border-top: solid 1px #ccc;
+        }
+
+        text-align: left;
+        padding: 24px 0;
+
+        &--info {
+            // height: fit-content;
+            padding: 29px 0;
+
+            &:nth-last-child(1),
+            &:nth-last-child(2) {
+                .c-table__cell {
+                    color: #00a99d;
+                }
+            }
+
+            &:nth-child(5),
+            &:nth-child(7) {
+                .c-table__cell p {
+                    &:not(&:nth-child(1)) {
+                        margin-top: 13px;
+                    }
+                }
+            }
+        }
+
+        &--feedback {
+            border-color: #c5c5c5;
+
+            &:nth-child(1) {
+                border-color: #c5c5c5;
+            }
+        }
+
+        @include sp {
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10px 0;
+
+            // height: 64px;
+            // height: fit-content;
+        }
+    }
+
+    .c-table__header {
+        width: 13.7%;
+
+        &--feedback {
+            width: 33.7%;
+        }
+        @include sp {
+            width: fit-content;
+        }
+    }
+
+    .c-table__headertime {
+        font-weight: 400;
+        font-size: 1.4rem;
+        color: #781111;
+        @include sp {
+            font-size: 1.2rem;
+        }
+    }
+
+    .c-table__cell {
+        letter-spacing: 0.1px;
+
+        @include sp {
+            font-weight: 500;
+            font-size: 1.3rem;
+            margin-top: 5px;
+        }
+
+        &--info {
+            padding-left: 52px;
+            @include sp {
+                padding-left: 0;
+                font-weight: 400;
+            }
+        }
+
+        &--feedback {
+            height: 45px;
+            width: 40%;
+        }
+    }
+}
