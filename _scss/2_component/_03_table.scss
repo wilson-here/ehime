@@ -6,9 +6,10 @@
         @include sp {
             margin-top: 42px;
         }
+    }
 
-        &--feedback {
-        }
+    &--feedback {
+        margin-top: 58px;
     }
 
     .c-table__content {
@@ -52,9 +53,37 @@
 
         &--feedback {
             border-color: #c5c5c5;
+            padding: 20px 0;
 
             &:nth-child(1) {
                 border-color: #c5c5c5;
+            }
+
+            &:nth-child(3),
+            &:nth-child(6) {
+                .c-table__cell--feedback {
+                    flex: 1;
+                }
+            }
+
+            &:nth-child(6) {
+                .c-feedback__inputtxt {
+                    flex: 1;
+                    @include tab {
+                        flex: auto;
+                    }
+                }
+
+                .c-table__cell--feedback {
+                    margin-top: 15px;
+                }
+            }
+
+            &:nth-child(7) {
+                .c-table__cell--feedback {
+                    display: flex;
+                    flex: 1;
+                }
             }
         }
 
@@ -71,12 +100,26 @@
 
     .c-table__header {
         width: 13.7%;
+        @include tab {
+            width: 14.7%;
+        }
 
         &--feedback {
-            width: 33.7%;
+            margin-top: 4px;
+            letter-spacing: 1.4px;
+            width: 32.1%;
+            @include tab {
+                width: 40%;
+            }
         }
         @include sp {
             width: fit-content;
+        }
+    }
+
+    .c-table__headertxt {
+        @include sp {
+            font-size: 1.2rem;
         }
     }
 
@@ -107,8 +150,30 @@
         }
 
         &--feedback {
-            height: 45px;
-            width: 40%;
+            width: 50%;
+            @include tab {
+                flex: 1;
+                width: 100%;
+            }
+        }
+    }
+
+    .c-table__cellline {
+        display: flex;
+        @include tab {
+            flex-direction: column;
+        }
+
+        .c-feedback__inputtxt {
+            margin-left: 33px;
+            @include tab {
+                margin-left: 0;
+                margin-top: 14px;
+            }
+        }
+
+        &:not(:nth-child(1)) {
+            margin-top: 14px;
         }
     }
 }

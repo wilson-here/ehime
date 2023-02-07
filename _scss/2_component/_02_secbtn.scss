@@ -8,6 +8,7 @@
     box-shadow: 4px 4px $main-color;
     max-width: 450px;
     margin: 70px auto 0;
+    box-sizing: border-box;
 
     @include sp {
         height: 38px;
@@ -27,6 +28,20 @@
         background-color: $special-color;
         box-shadow: none;
         margin-top: calc(25.6% - 70px);
+
+        &:hover {
+            // opacity: 1;
+            // box-shadow: none;
+            //   transition: box-shadow 0s;
+            transform: none !important;
+            border: 2px solid #00a99d;
+
+            transition: border 0s;
+
+            .c-secbtn__icon--overview {
+                transform: translateX(2px);
+            }
+        }
         @include fr1200down {
             margin-top: 20px;
         }
@@ -36,11 +51,18 @@
         }
     }
 
+    &--feedback {
+        margin-top: 50px;
+    }
+
     &:hover {
         transform: translate(4px, 4px);
         opacity: 1;
         box-shadow: none;
-        transition: box-shadow 0s;
+
+        .c-secbtn__icon {
+            opacity: 1;
+        }
     }
 
     .c-secbtn__text {
@@ -62,6 +84,7 @@
     .c-secbtn__icon {
         position: absolute;
         right: 20px;
+
         @include sp {
             right: 34px;
             width: 15px;

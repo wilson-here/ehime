@@ -1,0 +1,13 @@
+.c-backtotop {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include sp {
+        height: 50px;
+    }
+
+    .c-backtotop__icon {
+        width: 35px;
+    }
+}

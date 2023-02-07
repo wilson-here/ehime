@@ -11,8 +11,11 @@
     <!-- logo, nav, inquiry start -->
     <div class="c-header__logonavinquiry">
       <!-- LOGO start -->
-      <a href="./" class="u-verticalalign">
-        <img src="./assets/img/logo.png" alt="Ehime | Home page" class="c-header__logoimg">
+      <a href="./" class="c-header__logo u-verticalalign">
+        <picture>
+          <source media="(max-width: 767px)" srcset="./assets/img/logo--sp.png">
+          <img src="./assets/img/logo.png" alt="Ehime | Home page" class="c-header__logoimg">
+        </picture>
       </a>
       <!-- LOGO end -->
 
@@ -37,7 +40,7 @@
         <!-- NAV PC end -->
 
         <!-- INQUIRY start -->
-        <a href="./" class="c-header__inquiry u-verticalalign">
+        <a href="./" class="c-header__inquiry">
           お問い合わせ
         </a>
         <!-- INQUIRY end -->

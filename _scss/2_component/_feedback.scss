@@ -1,64 +1,175 @@
 .c-feedback {
-  .c-feedback__contentwrapper {
-  }
-
-  .c-feedback__heading {
-    text-align: center;
-  }
-
-  .c-feedback__descr {
-    font-size: 1.4rem;
-
-    &--green {
-      font-weight: 700;
-      color: $secondary-color;
+    .c-feedback__contentwrapper {
     }
 
-    &--red {
-      color: #fd0000;
-      font-size: 1.4rem;
+    .c-feedback__heading {
+        text-align: center;
+        @include sp {
+            font-size: 2rem;
+        }
     }
-  }
 
-  .c-feedback__pleasecheck {
-    font-size: 1.4rem;
-    color: #f00;
-  }
+    .c-feedback__descr {
+        font-size: 1.4rem;
+        margin-top: 25px;
+        letter-spacing: 1.4px;
+        font-feature-settings: "palt";
+        line-height: 2;
+        @include sp {
+            font-size: 1.2rem;
+        }
 
-  .c-feedback__form {
-  }
+        &--green {
+            font-weight: 700;
+            color: $secondary-color;
+        }
 
-  .c-feedback__required {
-    font-family: $secondary-fonts;
-    color: #f00;
-    font-weight: 400;
-  }
+        &--red {
+            color: #fd0000;
+            font-size: 1.4rem;
+            margin-top: 4px;
+            letter-spacing: 1.1px;
+        }
+    }
 
-  .c-feedback__pleaseenter {
-    font-size: 1.4rem;
-    color: #f00;
-    display: none;
-  }
+    .c-feedback__pleasecheck {
+        font-size: 1.4rem;
+        color: #f00;
+        display: none;
+        @include sp {
+            font-size: 1.2rem;
+        }
+    }
 
-  .c-feedback__labelcheckbox {
-    font-weight: 700;
-  }
+    .c-feedback__form {
+        .c-feedback__required {
+            margin-left: -6px;
+        }
+    }
 
-  .c-feedback__checkboxdefault {
-  }
+    .c-feedback__required {
+        font-family: $secondary-fonts;
+        color: #f00;
+        font-weight: 400;
+    }
 
-  .c-feedback__checkboxcustom {
-  }
+    .c-feedback__pleaseenter {
+        font-size: 1.4rem;
+        color: #f00;
+        display: none;
+    }
 
-  .c-feedback__inputtxt {
-    border: none;
-    background: #f2f2f2;
-    width: 100%;
-    padding: 0;
-    height: 100%;
-  }
+    //   CHECK BOX CSS start
+    // ***************************************************
+    .c-feedback__labelcheckbox {
+        font-weight: 700;
+        display: flex;
+        align-items: center;
 
-  .c-feedback__headertxt {
-    display: block;
-  }
+        &:not(:nth-child(1)) {
+            margin-left: 33px;
+            @include tab {
+                margin-left: 0;
+                margin-top: 14px;
+            }
+        }
+        /* Customize the label (the container) */
+        position: relative;
+        padding-left: 26px;
+        letter-spacing: 1.5px;
+        cursor: pointer;
+        user-select: none;
+        user-select: none;
+        user-select: none;
+        user-select: none;
+        font-size: 1.6rem;
+        @include sp {
+            font-size: 1.2rem;
+        }
+
+        /* On mouse-over, add a grey background color */
+        &:hover .c-feedback__checkboxcustom {
+            background-color: #ccc;
+        }
+
+        /* When the checkbox is checked, add a blue background */
+        & .c-feedback__checkboxdefault:checked ~ .c-feedback__checkboxcustom {
+            background-color: #2196f3;
+        }
+
+        /* Show the checkmark when checked */
+        &
+        .c-feedback__checkboxdefault:checked
+        ~ .c-feedback__checkboxcustom::after {
+            display: block;
+        }
+    }
+
+    .c-feedback__checkboxdefault {
+        /* Hide the browser's default checkbox */
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    .c-feedback__checkboxcustom {
+        /* Create a custom checkbox */
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        height: 17px;
+        width: 17px;
+        background-color: #eee;
+
+        /* Create the checkmark/indicator (hidden when not checked) */
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: none;
+
+            /* Style the checkmark/indicator */
+            left: 5px;
+            top: 0;
+
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            transform: rotate(45deg);
+            transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    }
+
+    //   CHECK BOX CSS end
+    // ***************************************************
+
+    .c-feedback__headertxt {
+        display: block;
+    }
+
+    .c-feedback__inputtxt {
+        border: none;
+        background: #f2f2f2;
+        padding: 0 10px;
+        height: 45px;
+        width: 100%;
+        box-sizing: border-box;
+        @include sp {
+            height: 30px;
+        }
+    }
+
+    .c-feedback__inputtxtarea {
+        height: 210px;
+        padding: 10px;
+        overflow: hidden;
+        resize: none;
+
+        // display: flex;
+    }
 }

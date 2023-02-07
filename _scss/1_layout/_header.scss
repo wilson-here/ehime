@@ -1,8 +1,15 @@
 .c-header {
     // position: fixed;
-    background-color: bisque;
+    background-color: #fff;
     width: 100%;
     padding: 0 50px;
+    @include sp {
+        padding: 0;
+    }
+
+    .l-container--1160px {
+        max-width: unset;
+    }
 
     .c-header__forcompanywrapper {
         display: flex;
@@ -26,6 +33,12 @@
         height: 91px;
         justify-content: space-between;
         align-items: center;
+        @include tab {
+            height: 140px;
+        }
+        @include sp {
+            height: 70px;
+        }
     }
 
     .c-header__navinquiry {
@@ -71,6 +84,9 @@
         margin-left: 23px;
         position: relative;
         font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         @include fr1200down {
             margin-left: 12px;
             padding: 0 24px;
@@ -78,9 +94,12 @@
         @include tab {
             flex-direction: column;
             padding: 0;
+            width: 140px;
         }
         @include sp {
             font-size: 1rem;
+            width: 70px;
+            margin-left: 0;
         }
 
         &::before {
@@ -90,6 +109,7 @@
                 content: "\f0e0";
                 font-size: 6rem;
                 color: #fff;
+                line-height: 1;
             }
 
             @include sp {
@@ -112,12 +132,24 @@
         @include tab {
             width: 330px;
         }
+        @include sp {
+            padding: 0 8px;
+        }
     }
 
     .c-header__menuspbtn {
-        background-color: $main-color;
-        display: flex;
-        flex-direction: column;
+        @include tab {
+            background-color: $main-color;
+            display: flex !important;
+            flex-direction: column;
+            width: 140px;
+            align-items: center;
+            justify-content: center;
+        }
+        @include sp {
+            width: 70px;
+            margin-top: 3px;
+        }
     }
 
     .c-header__menuspbtnicon {

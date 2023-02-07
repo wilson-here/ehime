@@ -8,8 +8,9 @@ git remote add origin https://github.com/allgrow-labo-training/exam-Ha_Quang_Anh
 git push -u origin master
 
 //
-http://aglstaff.allgrow-labo.jp/luongnguyenhaianh/exam/#
 http://aglstaff.allgrow-labo.jp/letuananh/task17/index.html#
+http://aglstaff.allgrow-labo.jp/luongnguyenhaianh/exam/#
+https://ehime-shigotozukan.com/
 
 https://fontawesome.com/v5/cheatsheet#use
 
@@ -31,6 +32,35 @@ link goi, mail chi can tren sp hay sao?
 
 chinh lai hieu ung hover cua btn
 
+!!! check toan bo img: chỉ xuất 2x trên SP thôi, Tablet vs Pc dùng hình bình thường
+
+check alt all img
+
+check semantic meaning all the
+
+check color all
+
+dung after cho icon arrow cua btn (fix loi arrow bi nhay khi)
+check gan link all
+thu tu de cac the trong file layout (js, css...)
+folder layout cua ejs co bao gom footer header ko?
+check rule + check cac loi trong report cu
+
+// chua lam: breadcrumb, backtotop
+
+//HEADER
+header nam trong container
+gan link navi chinh xac
+
+//MAINVISUAL ref
+sua CSS sang SCSS
+mainvisual cua trang khac thi thay doi
+main visual cham nam duoi bi header de len
+
+//PICKUP ref
+sua CSS sang SCSS
+chinh lai dot slick
+
 //COMPANY LIST
 DONE check border radius, BOX SHADOW, SPREAD? in PTS?
 DONE bao loi des PP o company list PC
@@ -47,3 +77,138 @@ link web example co phai la link ngoai khong?
 
 // FEEDBACK
 font kozuka gothic pr6n co san trong may thi include vo src code hay van phai hoi khach?
+
+// FORM
+chinh lai js form
+
+//FOOTER
+opacity cua border right left-block
+
+// js
+let scrollPosition = 0;
+const $body = document.querySelector("body");
+function init() {
+  $(".c-mainvisual__slides").slick({
+    speed: 1000,
+    infinite: true,
+    autoplay: true,
+    fade: true,
+    cssEase: "linear",
+    arrows: false,
+    dots: false,
+    slidesToShow: 1,
+  });
+}
+setTimeout(init(), 2000)
+​
+$(document).ready(function () {
+$(".c-pickup__slider").slick({
+    speed: 600,
+    infinite: true,
+    autoplay: true,
+    cssEase: "linear",
+    arrows: true,
+    dots: true,
+    slidesToShow: 5,
+    centerMode: true,
+    variableWidth: true,
+    prevArrow: $(".c-pickup__prev"),
+    nextArrow: $(".c-pickup__next"),
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+        },
+      },
+    ],
+  });
+​
+  $(".c-footer__totop").click(function () {
+    $("html, body").animate(
+      {
+        scrollTop: 0,
+      },
+      1000
+    );
+  });
+  function disableScroll() {
+    var ycoord = $(window).scrollTop();
+    $(".c-header__overlay").data("ycoord", ycoord);
+    ycoord = ycoord * -1;
+    $("body")
+      .css("position", "fixed")
+      .css("left", "0px")
+      .css("right", "0px")
+      .css("top", ycoord + "px");
+  }
+  function enableScroll() {
+    $("body")
+      .css("position", "")
+      .css("left", "auto")
+      .css("right", "auto")
+      .css("top", "auto");
+    $(window).scrollTop($(".c-header**overlay").data("ycoord"));
+}
+function navClose() {
+if ($(".c-header**overlay").hasClass("c-header**overlay--active")) {
+$(".c-header**overlay").removeClass("c-header**overlay--active");
+}
+}
+$(".c-header**menu").click(function () {
+if (!$(".c-header__overlay").hasClass("c-header__overlay--active")) {
+      $(".c-header__overlay").addClass("c-header__overlay--active");
+      disableScroll();
+    }
+  });
+  $(".c-header__close").click(function () {
+    navClose();
+    enableScroll();
+  });
+  $(".c-header__navclose").click(function () {
+    enableScroll();
+    navClose();
+  });
+  var $form = $("form");
+  $.validator.addMethod(
+    "noSpacing",
+    function (value, element) {
+      if ($.trim(value).length == 0) {
+return false;
+} else {
+return true;
+}
+},
+"『お問い合わせ内容』を入力してください。"
+);
+$form.validate({
+    rules: {
+      name: {
+        required: true,
+      },
+      email: {
+        required: true,
+        email: true,
+      },
+      phone: {
+        required: true,
+        digits: true,
+      },
+      content: {
+        required: true,
+        noSpacing: true,
+      },
+    },
+    messages: {
+      name: "『氏名』を入力してください。",
+      email: "『メールアドレス』を入力してください。",
+      phone: "『電話番号』を入力してください。",
+      content: "『お問い合わせ内容』を入力してください。",
+    },
+  });
+  $form.on("submit", function (e) {
+    if (!$form.valid()) {
+$(".c-contact\_\_error").removeClass("is-hidden");
+}
+});
+});
