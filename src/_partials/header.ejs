@@ -1,0 +1,131 @@
+<header class="c-header">
+  <div class="c-header__content l-container l-container--1160px">
+    <!-- for company start -->
+    <div class="c-header__forcompanywrapper">
+      <a href="#" class="c-header__forcompany">掲載・取材依頼の企業様へ
+        <img src="./assets/img/arrow.svg" alt="2020年卒学生向けの企業紹介サイト" class="c-header__arrowicon">
+      </a>
+    </div>
+    <!-- for company end -->
+
+    <!-- logo, nav, inquiry start -->
+    <div class="c-header__logonavinquiry">
+      <!-- LOGO start -->
+      <a href="./" class="c-header__logo u-verticalalign">
+        <picture>
+          <source media="(max-width: 767px)" srcset="./assets/img/logo--sp.png">
+          <img src="./assets/img/logo.png" alt="Ehime | Home page" class="c-header__logoimg">
+        </picture>
+      </a>
+      <!-- LOGO end -->
+
+      <!-- NAV, INQUIRY start -->
+      <div class="c-header__navinquiry">
+        <!-- NAV PC start -->
+        <nav class="c-header__nav  u-verticalalign">
+          <ul class="c-header__navlinklists">
+            <% if (typeof linklists !='undefined' ) { %>
+              <% linklists.main && linklists.main.forEach(link=> { %>
+                <li class="c-header__navlinkli">
+                  <a class="c-header__navlink u-verticalalign <% if (link.current || link.active) { %>is-active <% } %>"
+                    href=" <%=link.url
+                  %>">
+                    <%= link.title %>
+                  </a>
+                </li>
+                <% }) %>
+                  <% } %>
+          </ul>
+        </nav>
+        <!-- NAV PC end -->
+
+        <!-- INQUIRY start -->
+        <a href="./contact.html" class="c-header__inquiry">
+          お問い合わせ
+        </a>
+        <!-- INQUIRY end -->
+
+        <!-- MENU BTN SP start -->
+        <div class="c-spbtn c-header__menuspbtn is-display--tabsp">
+          <img src="./assets/img/menuspbtn.png" alt="メニュー" class="c-spbtn__icon c-header__menuspbtnicon">
+          <span class="c-spbtn__txt c-header__menuspbtntxt">メニュー</span>
+        </div>
+        <!-- MENU BTN SP end -->
+
+      </div>
+      <!-- NAV, INQUIRY end -->
+    </div>
+    <!-- logo, nav, inquiry end -->
+  </div>
+
+  <!-- Menu sp full start -->
+  <div class="c-header__menuspfull">
+    <!-- close icon start -->
+    <div class="c-spbtn c-header__closebtn">
+      <img src="./assets/img/closeicon.png" alt="閉じる" class="c-spbtn__icon c-header__closeicon">
+      <span class="c-spbtn__txt c-header__closebtntxt">閉じる</span>
+    </div>
+    <!-- close icon end -->
+
+    <!-- sp navigator buttons start -->
+    <div class="c-header__navbtns">
+      <nav>
+        <ul class="c-header__navbtnlist">
+          <li class="c-header__navbtn">
+            <a href="./" class="c-header__navlinksp is-palt">ホーム</a>
+          </li>
+          <li class="c-header__navbtn">
+            <a href="./" class="c-header__navlinksp is-palt">企業一覧</a>
+          </li>
+          <li class="c-header__navbtn">
+            <a href="./about.html" class="c-header__navlinksp is-palt">愛媛シゴト図鑑とは</a>
+          </li>
+          <li class="c-header__navbtn">
+            <a href="./" class="c-header__navlinksp is-palt">インタビュー</a>
+          </li>
+          <li class="c-header__navbtn">
+            <a href="./" class="c-header__navlinksp is-palt">ニュース</a>
+          </li>
+          <li class="c-header__navbtn">
+            <a href="./" class="c-header__navlinksp is-palt">運営会社</a>
+          </li>
+          <li class="c-header__navbtn">
+            <a href="./contact.html" class="c-header__navlinksp is-palt">お問い合わせ</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- sp navigator buttons end -->
+
+    <!-- tel opentime start -->
+    <div class="c-header__teltime">
+      <p class="c-header__phonewrapper">
+        <span class="c-header__tel">Tel.</span><a href="tel:089-947-1411" class="c-header__phone">089-947-1411</a>
+      </p>
+      <span class="c-header__timeopen is-palt">受付時間9:00〜17:00（平日のみ）</span>
+      <!-- tel opentime end -->
+    </div>
+
+    <!-- last block start -->
+    <div class="c-header__lastblock">
+      <ul class="c-header__navbtnlist">
+        <li class="c-header__navbtn">
+          <a href="./" class="c-header__navlinksp is-palt c-header__forpub is-palt">掲載・取材のご依頼についてはこちら</a>
+        </li>
+        <li class="c-header__navbtn">
+          <a href="./" class="c-header__navlinksp is-palt">プライバシーポリシー</a>
+        </li>
+        <li class="c-header__navbtn">
+          <a href="./" class="c-header__navlinksp is-palt">利用規約</a>
+        </li>
+        <li class="c-header__navbtn">
+          <span class="c-header__navlinksp is-palt c-header__closebtn c-header__btmmenuclose">閉じる</span>
+        </li>
+      </ul>
+      <!-- last block end -->
+    </div>
+
+  </div>
+  <!-- Menu sp full end -->
+
+</header>

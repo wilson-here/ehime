@@ -1,0 +1,327 @@
+.c-header {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    padding: 0 50px;
+    @include tab {
+        padding: 0;
+    }
+
+    .l-container--1160px {
+        @include tab {
+            max-width: unset;
+        }
+    }
+
+    .c-header__forcompanywrapper {
+        display: flex;
+        justify-content: flex-end;
+        @include tab {
+            display: none;
+        }
+    }
+
+    .c-header__forcompany {
+        font-size: 1.4rem;
+        color: #fefefe;
+        display: flex;
+        height: 53px;
+        align-items: center;
+        font-feature-settings: "palt";
+    }
+
+    .c-header__logonavinquiry {
+        display: flex;
+        height: 91px;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        @include tab {
+            height: 120px;
+        }
+        @include sp {
+            height: 70px;
+        }
+    }
+
+    .c-header__navinquiry {
+        display: flex;
+        height: 100%;
+        justify-content: flex-end;
+        min-width: 638px;
+        @include tab {
+            min-width: unset;
+        }
+
+        .is-display--tabsp {
+            display: none;
+            @include tab {
+                display: unset;
+            }
+        }
+    }
+
+    .c-header__nav {
+        @include tab {
+            display: none;
+        }
+    }
+
+    .c-header__arrowicon {
+        width: 20px;
+        margin-left: 12px;
+    }
+
+    .c-header__navlinklists {
+        display: flex;
+        font-weight: 700;
+        width: 100%;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .c-header__inquiry {
+        color: #fff;
+        background-color: $secondary-color;
+        padding: 0 38px;
+        margin-left: 23px;
+        position: relative;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include fr1200down {
+            margin-left: 12px;
+            padding: 0 24px;
+        }
+        @include tab {
+            flex-direction: column;
+            padding: 0;
+            width: 140px;
+        }
+        @include sp {
+            font-size: 1rem;
+            width: 70px;
+            margin-left: 0;
+        }
+
+        &::before {
+            @include tab {
+                font-family: "Font Awesome 5 Free";
+                content: "\f0e0";
+                font-weight: 400;
+                font-size: 6rem;
+                color: #fff;
+                line-height: 1;
+            }
+
+            @include sp {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    .c-header__navlink {
+        padding: 0 24px;
+        letter-spacing: -0.6px;
+
+        &:hover {
+            color: #fff;
+            background-color: $secondary-color;
+            opacity: 1;
+        }
+        @include fr1200down {
+            padding: 0 16px;
+        }
+    }
+
+    .c-header__logoimg {
+        width: 334px;
+        padding: 0 21px;
+        @include tab {
+            width: 330px;
+        }
+        @include sp {
+            padding: 0 8px;
+            width: 100%;
+            min-width: 180px;
+            max-width: 262px;
+        }
+    }
+
+    .c-header__menuspfull {
+        width: 100vw;
+        min-width: 320px;
+        height: 100vh;
+        // height: 9999px;
+        position: fixed;
+        top: 0;
+        display: none;
+        flex-direction: column;
+        background-color: $secondary-color;
+        overflow: auto;
+
+        &.is-active {
+            @include tab {
+                display: flex;
+                z-index: 1;
+            }
+        }
+    }
+
+    .c-header__menuspbtn {
+        @include tab {
+            background-color: $main-color;
+            align-self: end;
+        }
+    }
+
+    .c-header__closebtn {
+        @include tab {
+            flex: 0;
+            padding: 14px 0;
+            background-color: $secondary-color;
+            align-self: flex-end;
+        }
+    }
+
+    .c-header__closeicon {
+        width: 24px;
+    }
+
+    .c-header__navbtns {
+        @include tab {
+            margin-top: -14px;
+            padding-bottom: 72px;
+            border-bottom: 1px solid #dbeeec;
+        }
+        @include sp {
+            padding-bottom: 18px;
+        }
+    }
+
+    .c-header__navbtnlist {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .c-header__navbtn {
+        @include tab {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .c-header__navlinksp {
+        @include tab {
+            font-weight: 700;
+            font-size: 3.6rem;
+            color: #fff;
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 19px;
+        }
+        @include sp {
+            padding: 9px;
+            font-size: 1.8rem;
+        }
+    }
+
+    .c-header__forpub {
+        @include tab {
+            font-size: 3.2rem;
+            padding: 4px;
+            border: 1px solid #fff;
+        }
+        @include sp {
+            font-size: 1.6rem;
+        }
+    }
+
+    .c-header__btmmenuclose {
+        &::before {
+            @include tab {
+                font-family: "Font Awesome 5 Free";
+                content: "\f00d";
+                // font-weight: 400;
+                font-size: 3.6rem;
+                margin-right: 12px;
+            }
+            @include sp {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    .c-header__teltime {
+        font-weight: 700;
+        text-align: center;
+        border-bottom: 1px solid #dbeeec;
+        padding: 45px 50px 65px;
+        @include sp {
+            padding: 11px 15px 25px;
+        }
+    }
+
+    .c-header__phonewrapper {
+        color: #fff;
+    }
+
+    .c-header__tel {
+        @include tab {
+            font-size: 3.6rem;
+            text-transform: uppercase;
+        }
+        @include sp {
+            font-size: 1.8rem;
+        }
+    }
+
+    .c-header__phone {
+        @include tab {
+            font-size: 6rem;
+        }
+        @include sp {
+            font-size: 3rem;
+        }
+    }
+
+    .c-header__timeopen {
+        @include tab {
+            font-size: 3.2rem;
+
+            color: $secondary-color;
+            background-color: #fff;
+
+            margin-top: 8px;
+            display: inline-block;
+            width: 100%;
+        }
+        @include sp {
+            font-size: 1.6rem;
+        }
+    }
+
+    .c-header__lastblock {
+        padding: 65px 0 0;
+        @include sp {
+            padding: 25px 0;
+        }
+
+        .c-header__navbtn {
+            &:nth-child(1) {
+                padding: 0 50px;
+
+                @include sp {
+                    padding: 0 15px;
+                }
+            }
+
+            &:nth-child(2) {
+                margin-top: 17px;
+            }
+        }
+    }
+}

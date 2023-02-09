@@ -1,0 +1,36 @@
+.c-spbtn {
+    @include tab {
+        display: flex !important;
+        flex-direction: column;
+        width: 140px;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 140px;
+    }
+    @include sp {
+        height: 70px;
+        width: 70px;
+    }
+
+    .c-spbtn__icon {
+        @include tab {
+            width: 60px;
+        }
+        @include sp {
+            width: 30px;
+        }
+    }
+
+    .c-spbtn__txt {
+        color: #fff;
+        font-weight: 700;
+        @include tab {
+            margin-top: 10px;
+        }
+        @include sp {
+            font-size: 1rem;
+            margin-top: 3px;
+        }
+    }
+}

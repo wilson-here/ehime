@@ -1,0 +1,31 @@
+<section class="c-news">
+    <div class="c-news__content l-container l-container--780px">
+        <h2 class="c-sechead c-sechead--news">
+            <span class="c-sechead__eng">News</span>
+            新着ニュース
+        </h2>
+        <div class="c-table">
+            <table class="c-table__content">
+                <% news.forEach(newspiece=>{ %>
+                    <tr class="c-table__row" onclick="window.location.href='#'">
+                        <th class="c-table__header">
+                            <time class="c-table__headertime" datetime="<%= newspiece.datetime %>">
+                                <%= newspiece.date %>
+                            </time>
+                        </th>
+                        <td class="c-table__cell is-palt">
+                            <%= newspiece.newsheading %>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </table>
+        </div>
+        <a href="#" class="c-secbtn c-secbtn--news">
+            <span class="c-secbtn__text">ニュース一覧はこちら</span>
+            <img src="./assets/img/arrow.svg" alt="ニュース一覧はこちら" class="c-secbtn__icon">
+        </a>
+    </div>
+    <picture>
+        <img src="./assets/img/news__bookimg.png" alt="新着ニュース" class="c-news__bookicon is-display--onlypc">
+    </picture>
+</section>

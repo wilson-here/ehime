@@ -1,0 +1,8 @@
+.p-contact {
+    .c-mainvisual {
+        background-image: url(./assets/img/mainvisual/banner__contact.jpg);
+        @include sp {
+            background-image: url(./assets/img/mainvisual/banner__contact--sp.jpg);
+        }
+    }
+}

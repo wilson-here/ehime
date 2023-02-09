@@ -1,0 +1,143 @@
+.c-companylist {
+    padding: 50px 50px 80px;
+    @include sp {
+        padding: 35px 15px 43px;
+    }
+
+    background-image: url(../../assets/img/companylist/bgsection.jpg);
+    background-position: center;
+    background-size: cover;
+    @include sp {
+        background-image: url(../../assets/img/companylist/bgsection--sp.jpg);
+    }
+
+    .c-companylist__description {
+        font-size: 1.4rem;
+        text-align: center;
+        margin-top: 45px;
+        line-height: 1.7;
+        @include sp {
+            margin-top: 23px;
+            line-height: 1.8;
+        }
+    }
+
+    .c-companylist__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: -4px;
+        justify-content: space-between;
+        @include tab {
+            // margin-top: 0;
+        }
+    }
+
+    .c-companylist__block {
+        width: 49.1%;
+        display: flex;
+        position: relative;
+        margin-top: 50px;
+
+        @include tab {
+            width: 100%;
+        }
+
+        &:nth-child(1) {
+            @include sp {
+                margin-top: 28px;
+            }
+        }
+
+        &:not(:nth-child(1)) {
+            @include sp {
+                margin-top: 70px;
+            }
+        }
+
+        // &:nth-child(n + 2) {
+        //     @include sp {
+        //         margin-top: 50px;
+        //     }
+        // }
+
+        // &:nth-child(1),
+        // &:nth-child(2) {
+        //     @include tab {
+        //         margin-top: 50px;
+        //     }
+        // }
+    }
+
+    .c-companylist__imgwrapper {
+        width: 56%;
+    }
+
+    .c-companylist__img {
+        object-fit: cover;
+        height: 210px;
+        @include sp {
+            height: 125px;
+        }
+    }
+
+    .c-companylist__textwrapper {
+        background-color: $special-color;
+        box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.35);
+        position: absolute;
+        left: 49.5%;
+        top: 24px;
+        width: 50%;
+        padding: 19px 19px 28px;
+        @include sp {
+            left: 43.3%;
+            top: 15px;
+            width: 56.6%;
+            padding: 10px 9px 20px;
+        }
+    }
+
+    .c-companylist__blockheading {
+        font-size: 1.8rem;
+        @include sp {
+            font-size: 1.4rem;
+        }
+    }
+
+    .c-companylist__blocksubheading {
+        font-weight: 400;
+        font-size: 1.2rem;
+        margin-top: 2px;
+        @include sp {
+            font-size: 1.1rem;
+            margin-top: 0;
+        }
+    }
+
+    .c-companylist__blockdescription {
+        font-weight: 700;
+        font-size: 1.4rem;
+        color: $secondary-color;
+        margin-top: 8px;
+        line-height: 1.8;
+        @include sp {
+            font-size: 1.2rem;
+            margin-top: 0;
+            line-height: 1.5;
+        }
+    }
+
+    .c-companylist__blocklabel {
+        font-size: 1.2rem;
+        background-color: #ccc;
+        border-radius: 10px;
+        display: inline-block;
+        margin-top: 23px;
+        padding: 2px 9px;
+        margin-left: -1px;
+        @include sp {
+            font-size: 1.1rem;
+            margin-top: 13px;
+            margin-left: 1px;
+        }
+    }
+}
