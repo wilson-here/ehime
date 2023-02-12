@@ -1,19 +1,27 @@
 <section class="c-info ">
     <div class="c-info__contentwrapper l-container l-container--780px">
+        <!-- Info heading start -->
         <div class="c-info__headingwrapper">
-
             <h2 class="c-sechead c-sechead--info">
                 運営会社
             </h2>
             <div class="c-info__quoteiconwrapper">
-                <img class="c-info__quoteicon" src="./assets/img/quote-open.png" alt="運営会社">
+                <picture>
+                    <source media="(max-width: 767px)" srcset="./assets/img/info/quote-open--sp.png">
+                    <img class="c-info__quoteicon" src="./assets/img/info/quote-open.png" alt="quote open icon">
+                </picture>
             </div>
             <div class="c-info__quoteiconwrapper">
-                <img class="c-info__quoteicon" src="./assets/img/quote-close.png" alt="運営会社">
+                <picture>
+                    <source media="(max-width: 767px)" srcset="./assets/img/info/quote-close--sp.png">
+                    <img class="c-info__quoteicon" src="./assets/img/info/quote-close.png" alt="quote close icon">
+                </picture>
             </div>
+            <!-- Info heading end -->
+
         </div>
         <div class="c-table c-table--info">
-            <table class="c-table__content is-palt">
+            <table class="c-table__content u-palt">
                 <% infos.forEach(info=>{ %>
                     <tr class="c-table__row c-table__row--info">
                         <th class="c-table__header">

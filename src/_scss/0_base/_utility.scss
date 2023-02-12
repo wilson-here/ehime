@@ -1,100 +1,78 @@
-.is-palt {
+.u-palt {
+  font-feature-settings: "palt";
+
+  &--onlypc {
     font-feature-settings: "palt";
 
-    &--onlypc {
-        font-feature-settings: "palt";
-
-        @include tab {
-            font-feature-settings: unset;
-        }
+    @include tab {
+      font-feature-settings: unset;
     }
+  }
 
-    &--onlysp {
-        @include sp {
-            font-feature-settings: "palt";
-        }
+  &--onlysp {
+    @include sp {
+      font-feature-settings: "palt";
     }
-}
-
-.is-notdisplay {
-    display: none;
-
-    &--fr1200down {
-        @include fr1200down {
-            display: none;
-        }
-    }
-
-    &--onlypc {
-        display: none;
-        @include tab {
-            display: unset;
-        }
-    }
-
-    &--onlytabsp {
-        @include tab {
-            display: none;
-        }
-    }
-}
-
-.is-display {
-    &--onlypc {
-        @include tab {
-            display: none;
-        }
-    }
-
-    &--pctab {
-        @include sp {
-            display: none;
-        }
-    }
-
-    &--tabsp {
-        display: none;
-        @include tab {
-            display: unset;
-        }
-    }
-
-    &--onlysp {
-        display: none;
-        @include sp {
-            display: unset;
-        }
-    }
+  }
 }
 
 .u-verticalalign {
-    height: 100%;
-    display: flex;
-    align-items: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .u-noscroll {
-    overflow: hidden;
+  overflow: hidden;
 }
 
-.is-marginl {
-    margin-left: 32.1%;
-    display: block;
-    transform: translateY(-14px);
-    @include sp {
-        margin-left: 0;
+.is-notdisplay {
+  display: none;
+
+  &--fr1200down {
+    @include fr1200down {
+      display: none;
     }
+  }
+
+  &--onlypc {
+    display: none;
+    @include tab {
+      display: unset;
+    }
+  }
+
+  &--onlytabsp {
+    @include tab {
+      display: none;
+    }
+  }
 }
 
-.u-message__please {
-    color: #f00;
-    margin-top: 33px;
-    margin-bottom: 18px;
-    display: inline-block;
-    font-size: 1.4rem;
-}
+.is-display {
+  &--onlypc {
+    @include tab {
+      display: none;
+    }
+  }
 
-.u-message {
-    font-size: 1.4rem;
-    color: #f00;
+  &--pctab {
+    @include sp {
+      display: none;
+    }
+  }
+
+  &--tabsp {
+    display: none;
+    @include tab {
+      display: unset;
+    }
+  }
+
+  &--onlysp {
+    display: none;
+    @include sp {
+      display: unset;
+    }
+  }
 }

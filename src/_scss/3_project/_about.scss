@@ -2,16 +2,17 @@
     .p-about__dotbg {
         background-image: url(../../assets/img/benefits/bgsection.jpg);
         background-position: center;
-        background-size: cover;
+        background-repeat: repeat;
+
         @include sp {
             background-image: url(../../assets/img/benefits/bgsection--sp.jpg);
         }
     }
 
     .c-mainvisual {
-        background-image: url(./assets/img/mainvisual/banner__about.jpg);
+        background-image: url(../../assets/img/mainvisual/banner__about.jpg);
         @include sp {
-            background-image: url(./assets/img/mainvisual/banner__about--sp.jpg);
+            background-image: url(../../assets/img/mainvisual/banner__about--sp.jpg);
         }
     }
 }

@@ -2,12 +2,13 @@
 $base-width: 1920px;
 
 // font family
-$main-fonts: "Noto Sans JP", sans-serif;
-$secondary-fonts: "Kozuka Gothic Pr6N", sans-serif;
-$libre-fonts: "Libre Franklin", sans-serif;
+$noto-sans-jp: "Noto Sans JP", sans-serif;
+$kozuka-gothic-pr6n: "Kozuka Gothic Pr6N", sans-serif;
+$libre-franklin: "Libre Franklin", sans-serif;
 
 //color common
-$main-color: #000;
-$secondary-color: #00ada0;
-$special-color: #fff;
-$almost-black: #020000;
+$black: #000;
+$black-almost: #020000;
+$teal: #00ada0;
+$green-pastel: #acdeda;
+$white: #fff;

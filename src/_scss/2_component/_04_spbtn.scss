@@ -1,16 +1,17 @@
 .c-spbtn {
     @include tab {
+        color: #fff;
+        font-weight: 700;
+        height: 100%;
+        width: 120px;
         display: flex !important;
         flex-direction: column;
-        width: 140px;
         align-items: center;
         justify-content: center;
-        height: 100%;
-        width: 140px;
     }
     @include sp {
-        height: 70px;
         width: 70px;
+        height: 70px;
     }
 
     .c-spbtn__icon {
@@ -23,8 +24,8 @@
     }
 
     .c-spbtn__txt {
-        color: #fff;
         font-weight: 700;
+        color: #fff;
         @include tab {
             margin-top: 10px;
         }

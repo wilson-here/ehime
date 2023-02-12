@@ -1,10 +1,10 @@
 <section class="c-companylist">
     <div class="c-companylist__content l-container l-container--1160px">
-        <h2 class="c-sechead">
+        <h2 class="c-sechead c-sechead--companylist">
             <span class="c-sechead__eng">Corporate Information</span>
             企業一覧
         </h2>
-        <p class="c-companylist__description is-palt">愛媛で働きたい。<br class="is-display--onlysp">けれど、どんな会社があるか分からない。<br>
+        <p class="c-companylist__description u-palt">愛媛で働きたい。<br class="is-display--onlysp">けれど、どんな会社があるか分からない。<br>
             愛媛シゴト図鑑では、愛媛に本社がある企業のみご紹介！</p>
         <div class="c-companylist__list">
             <% companies.forEach(company=> { %>
@@ -17,7 +17,7 @@
                                 class="c-companylist__img">
                         </picture>
                     </div>
-                    <div class="c-companylist__textwrapper is-palt">
+                    <div class="c-companylist__textwrapper u-palt">
                         <h3 class="c-companylist__blockheading">
                             <%= company.heading %>
                         </h3>
@@ -34,7 +34,7 @@
         </div>
         <a href="#" class="c-secbtn">
             <span class="c-secbtn__text">企業一覧はこちら</span>
-            <img src="./assets/img/arrow.svg" alt="企業一覧はこちら" class="c-secbtn__icon">
+            <img src="./assets/img/arrow.svg" alt="arrow icon" class="c-secbtn__icon">
         </a>
     </div>
 </section>

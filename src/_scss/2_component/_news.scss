@@ -1,9 +1,9 @@
 .c-news {
   padding: 30px 50px 80px;
+  position: relative;
   @include sp {
     padding: 16px 15px 43px;
   }
-  position: relative;
 
   .c-news__bookicon {
     position: absolute;
@@ -11,6 +11,7 @@
     z-index: -1;
     left: 11.5%;
   }
+
   .c-table__row {
     &:hover {
       cursor: pointer;

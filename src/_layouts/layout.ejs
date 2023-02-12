@@ -3,10 +3,13 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" type="image/svg+xml" href="./assets/img/header__logo.svg">
+  <!-- Favicon start -->
+  <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.png">
+  <!-- Favicon end -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
-    <%= (typeof title !="undefined" ? title : "Ehime" ) %>
+    <%= (typeof title !="undefined" ? title : "愛媛シゴト図鑑 Ehime Shigotozukan" ) %>
   </title>
 
   <meta name="keywords" content="">
@@ -14,6 +17,7 @@
   <script type="module" src="/_scss/style.js"></script>
   {{ head }}
   <!-- Font start -->
+  <!-- ******************************** -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Noto Sans start -->
@@ -28,7 +32,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
   <!-- Font Awesome end -->
   <!-- Font end -->
-
+  <!-- ******************************** -->
 
   <!-- CSS slick start-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
@@ -41,8 +45,7 @@
   <!-- CSS slick end-->
 </head>
 
-<body class="">
-
+<body>
   <%- include('_partials/header'); -%>
 
     {{ content }}
@@ -50,7 +53,6 @@
     <%- include('_partials/footer'); -%>
 
       {{ script }}
-
 
       <!-- JS jQuery & slick start -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -61,8 +63,6 @@
       <!-- JS jQuery & slick end -->
 
       <script src="./assets/js/main.js"></script>
-      <!-- <script src="./assets/js/form.js"></script> -->
-
 </body>
 
 </html>

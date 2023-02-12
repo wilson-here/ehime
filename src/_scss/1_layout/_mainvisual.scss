@@ -1,155 +1,177 @@
 .c-mainvisual {
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
+    width: 100%;
     height: 400px;
+
+    margin: 0 auto;
+    position: relative;
+
     @include sp {
         height: 180px;
+
         top: 70px;
     }
-}
 
-.c-mainvisual__slick {
-    height: 100vh;
-    min-height: 700px;
+    .c-mainvisual__slick {
+        height: 100vh;
+        min-height: 700px;
 
-    display: none;
+        display: none;
 
-    @include sp {
-        height: calc(100vh - 70px);
-        min-height: 374px;
+        @include sp {
+            height: calc(100vh - 70px);
+            min-height: 374px;
+        }
     }
-}
 
-.c-mainvisual__slickitem {
-    height: 100%;
-    width: 100%;
-
-    &::before {
-        content: "";
-        background-color: rgba(0, 0, 0, 0.122);
-        opacity: 0.478;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
+    .c-mainvisual__slickitem {
         height: 100%;
-        z-index: 1;
-    }
-}
+        width: 100%;
 
-.c-mainvisual__slickitem img {
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-    height: 100vh;
+        position: relative;
 
-    min-height: 700px;
-    @include tab {
-        // object-position: top 60px left 50%;
+        &::before {
+            content: "";
 
-        object-position: top 0 left 55%;
-    }
-    @include sp {
-        height: calc(100vh - 70px);
+            background-color: rgba(0, 0, 0, 0.122);
+            opacity: 0.478;
 
-        // height: 444px;
-        min-height: 374px;
-        // object-position: top 70px left 80%;
-        object-position: top 0 left 80%;
-    }
-}
+            width: 100%;
+            height: 100%;
 
-.c-mainvisual__content {
-    position: absolute;
-
-    padding: 0 50px;
-    width: 100%;
-    display: none;
-
-    &.is-active {
-        display: block;
-    }
-
-    @include sp {
-        top: unset;
-        bottom: -52px;
-
-        text-align: center;
-        padding: 0 15px;
-    }
-
-    &--home {
-        top: 73.7%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        @include sp {
-            top: 71.6%;
+            position: absolute;
+            z-index: 1;
         }
     }
 
-    &--about,
-    &--contact {
-        top: 258px;
-        height: fit-content;
-        @include sp {
-            top: 100px;
-        }
+    .c-mainvisual__slickimg {
+        object-fit: cover;
+        object-position: center;
 
-        .c-mainvisual__info {
-            color: #fefefe;
+        width: 100%;
+        height: 100vh;
+        min-height: 700px;
+
+        position: relative;
+
+        @include tab {
+            object-position: top 0 left 55%;
+        }
+        @include sp {
+            object-position: top 0 left 80%;
+
+            height: calc(100vh - 70px);
+            min-height: 374px;
+        }
+    }
+
+    .c-mainvisual__content {
+        width: 100%;
+
+        padding: 0 50px;
+        position: absolute;
+
+        display: none;
+
+        @include sp {
             text-align: center;
+
+            padding: 0 15px;
+            top: unset;
+            bottom: -52px;
         }
 
-        .c-mainvisual__heading {
-            text-transform: uppercase;
-            font-family: $libre-fonts;
-            font-weight: 600;
-            font-size: 5rem;
+        &.is-active {
+            display: block;
+        }
+
+        &--home {
+            top: 73.7%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
             @include sp {
-                font-size: 3rem;
+                top: 71.6%;
             }
         }
 
-        .c-mainvisual__subheading {
-            margin-top: -14px;
-            letter-spacing: -1.1px;
+        &--nothome {
+            top: 258px;
+            height: fit-content;
+
             @include sp {
-                margin-top: -8px;
-                font-size: 1.7rem;
+                top: 100px;
+            }
+
+            .c-mainvisual__info {
+                color: #fefefe;
+                text-align: center;
+            }
+
+            .c-mainvisual__heading {
+                font-family: $libre-franklin;
+                font-weight: 600;
+                font-size: 5rem;
+                letter-spacing: -1.7px;
+                text-transform: uppercase;
+
+                @include sp {
+                    font-size: 3rem;
+                }
+            }
+
+            .c-mainvisual__subheading {
+                font-weight: 700;
+                font-size: 2.4rem;
+                letter-spacing: -1.1px;
+
+                margin-top: -14px;
+
+                display: block;
+
+                @include sp {
+                    font-size: 1.7rem;
+
+                    margin-top: -8px;
+                }
             }
         }
     }
-}
 
-.c-mainvisual__img {
-    margin-bottom: 35px;
-}
-@media only screen and (max-width: 320px) {
     .c-mainvisual__img {
-        margin-bottom: 34px;
-        width: 281px;
-    }
-}
+        margin-bottom: 35px;
 
-.c-mainvisual__text {
-    font-size: 2rem;
-    font-weight: bold;
-    padding: 3px 0;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.2);
-    color: #fff;
-    border-radius: 3px;
-    font-feature-settings: "palt" 1;
-    font-feature-settings: "palt" 1;
-    max-width: 562px;
-    width: 100%;
-    @include sp {
-        font-size: 1.6rem;
-        padding: 0 16px;
-        display: inline-block;
+        @include sp {
+            width: 281px;
+
+            margin-bottom: 34px;
+        }
+    }
+
+    .c-mainvisual__text {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #fff;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 3px;
+        font-feature-settings: "palt" 1;
+
+        max-width: 562px;
+        width: 100%;
+
+        padding: 3px 0;
+
+        display: block;
+
+        @include sp {
+            font-size: 1.6rem;
+            border-radius: 2px;
+
+            padding: 0 16px;
+        }
     }
 }

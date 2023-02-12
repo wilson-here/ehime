@@ -1,4 +1,7 @@
 .c-feedback {
+  @include pconly {
+    max-height: 1340px;
+  }
   padding: 42px 0 130px;
   @include tab {
     padding: 42px 0 30px;
@@ -18,7 +21,6 @@
     font-size: 1.4rem;
     margin-top: 26px;
     letter-spacing: 1.4px;
-    font-feature-settings: "palt";
     line-height: 2;
     @include sp {
       font-size: 1.2rem;
@@ -26,7 +28,7 @@
 
     &--green {
       font-weight: 700;
-      color: $secondary-color;
+      color: $teal;
     }
 
     &--red {
@@ -40,7 +42,19 @@
   .c-feedback__pleasecheck {
     font-size: 1.4rem;
     color: #f00;
+
+    margin-top: 20px;
+    margin-bottom: 25px;
+
     display: none;
+
+    &.is-active {
+      display: block;
+      position: absolute;
+      @include sp {
+        top: -1.9%;
+      }
+    }
     @include sp {
       font-size: 1.2rem;
     }
@@ -50,10 +64,17 @@
     .c-feedback__required {
       margin-left: -6px;
     }
+
+    .is-active {
+      display: block;
+      @include sp {
+        top: -1.9%;
+      }
+    }
   }
 
   .c-feedback__required {
-    font-family: $secondary-fonts;
+    font-family: $kozuka-gothic-pr6n;
     color: #f00;
     font-weight: 400;
   }
@@ -174,41 +195,20 @@
     padding: 10px;
     overflow: hidden;
     resize: none;
-
-    // display: flex;
   }
 
-  // form validate
-  //********************************** */
-  .c-feedback__errorall {
-    display: none;
-    margin-bottom: 25px;
-    @include sp {
-      font-size: 1.4rem;
-    }
-    &.is-active {
-      display: block;
-      position: absolute;
-      top: -3.9%;
-      @include sp {
-        top: -1.9%;
-      }
-    }
-  }
-
-  .c-feedback {
+  .c-feedback__error {
     color: #f00;
     font-size: 1.4rem;
     font-weight: 400;
   }
 
-  .c-feedback__error {
-    letter-spacing: 1.5px;
-    margin-bottom: 2px;
-    transform: translateY(7px);
-  }
+  label.c-feedback__error {
+    letter-spacing: 1.4px;
 
-  .c-feedback__item:first-child label.c-feedback__error {
-    letter-spacing: 0px;
+    margin-top: 10px;
+    margin-bottom: -2px;
+
+    display: block;
   }
 }

@@ -1,55 +1,55 @@
 var body = document.querySelector("body");
 var main = document.querySelector("main");
 
-//open-close header
+//open-close menu sp
 
-var menuspfull = document.querySelector(".c-header__menuspfull");
-var openmenubtn = document.querySelector(".c-header__menuspbtn");
-var closemenubtn = document.querySelector(".c-header__closebtn");
-var btmmenuclose = document.querySelector(".c-header__btmmenuclose");
+var menuSpFull = document.querySelector(".c-header__menuspfull");
+var openMenuBtn = document.querySelector(".c-header__menuspbtn");
+var closeMenuBtn = document.querySelector(".c-header__closebtn");
+var btmMenuClose = document.querySelector(".c-header__btmmenuclose");
+var navBtns = document.querySelectorAll(".c-header__navlinksp");
 
 function openMenu() {
-  menuspfull.classList.add("is-active");
+  menuSpFull.classList.add("is-active");
   body.classList.add("u-noscroll");
 }
 function closeMenu() {
-  menuspfull.classList.remove("is-active");
+  menuSpFull.classList.remove("is-active");
   body.classList.remove("u-noscroll");
 }
 function topFunction() {
-  menuspfull.scrollTop = 0;
+  menuSpFull.scrollTop = 0;
 }
 
-openmenubtn.addEventListener("click", function () {
+openMenuBtn.addEventListener("click", function () {
   openMenu();
   topFunction();
 });
 
-closemenubtn.addEventListener("click", function () {
+closeMenuBtn.addEventListener("click", function () {
   closeMenu();
 });
 
-btmmenuclose.addEventListener("click", function () {
+btmMenuClose.addEventListener("click", function () {
   closeMenu();
 });
 
-//mainvisual content base on page url
-//breadcrumb content base on page url
+navBtns.forEach((navBtn) => {
+  navBtn.addEventListener("click", function () {
+    closeMenu();
+  });
+});
 
-var mainvisualcontents = document.querySelectorAll(".c-mainvisual__content");
-var mainvisualcontenthome = document.querySelector(
-  ".c-mainvisual__content--home"
-);
-var mainvisualcontentabout = document.querySelector(
-  ".c-mainvisual__content--about"
-);
-var mainvisualcontentcontact = document.querySelector(
-  ".c-mainvisual__content--contact"
-);
+//mainvisual, breadcrumb content base on page url
 
-var lastbreadcrumbs = document.querySelectorAll(".c-breadcrumb__currentpage");
-var breadcrumbabout = document.querySelector(".c-breadcrumb__about");
-var breadcrumbcontact = document.querySelector(".c-breadcrumb__contact");
+var mainvisualContents = document.querySelectorAll(".c-mainvisual__content");
+var mainvisualcontentHome = document.querySelector("#home");
+var mainvisualcontentAbout = document.querySelector("#about");
+var mainvisualcontentContact = document.querySelector("#contact");
+
+var lastBreadcrumbs = document.querySelectorAll(".c-breadcrumb__currentpage");
+var breadcrumbAbout = document.querySelector(".c-breadcrumb__about");
+var breadcrumbContact = document.querySelector(".c-breadcrumb__contact");
 
 function toggleActive(items, itemspecific) {
   items.forEach((item) => {
@@ -59,28 +59,18 @@ function toggleActive(items, itemspecific) {
 }
 
 if (main.classList.contains("p-top")) {
-  toggleActive(mainvisualcontents, mainvisualcontenthome);
+  toggleActive(mainvisualContents, mainvisualcontentHome);
 }
 
 if (main.classList.contains("p-about")) {
-  toggleActive(mainvisualcontents, mainvisualcontentabout);
-  toggleActive(lastbreadcrumbs, breadcrumbabout);
+  toggleActive(mainvisualContents, mainvisualcontentAbout);
+  toggleActive(lastBreadcrumbs, breadcrumbAbout);
 }
 
 if (main.classList.contains("p-contact")) {
-  toggleActive(mainvisualcontents, mainvisualcontentcontact);
-  toggleActive(lastbreadcrumbs, breadcrumbcontact);
+  toggleActive(mainvisualContents, mainvisualcontentContact);
+  toggleActive(lastBreadcrumbs, breadcrumbContact);
 }
-
-// link on news table row
-// var tablerows = document.querySelectorAll(".c-news .c-table__row");
-// if (tablerows.length !== 0) {
-//   tablerows.forEach((tablerow) => {
-//     tablerow.addEventListener("click", () => {
-//       window.location.href = "#";
-//     });
-//   });
-// }
 
 // slick
 
@@ -95,18 +85,14 @@ $(document).ready(function () {
     cssEase: "linear",
     arrows: false,
     infinite: true,
-    //remind/note: nho chinh autoplay lai ve true
     autoplay: true,
-    // autoplay: false,
     autoplaySpeed: 2000,
   });
   // slick slider pickup
   $(".c-pickup__slider").slick({
     dots: true,
     infinite: true,
-    //remind/note: nho chinh autoplay lai ve true
     autoplay: true,
-    // autoplay: false,
     autoplaySpeed: 2000,
     variableWidth: true,
     slidesToShow: 5,
@@ -147,56 +133,25 @@ $(document).ready(function () {
       },
     ],
   });
-  // slick slider post company
-  $(".c-corporate__slider").slick({
-    dots: true,
-    infinite: true,
-    // autoplay: true,
-    autoplaySpeed: 2000,
-    speed: 300,
-    arrows: false,
-    cssEase: "linear",
-  });
-
-  // menu sp
-  // 1. click to show menu sp
-  let menubtnsp = document.querySelector(".c-header__navbtnsp");
-  let menusp = document.querySelector(".c-header__navbarnormal");
-  menubtnsp.addEventListener("click", function () {
-    // if (menusp.classList.contains("is-active--showmenusp")) {
-    //   menusp.classList.remove("is-active--showmenusp");
-    //   menusp.classList.add("is-active--hidemenusp");
-    // } else {
-    //   menusp.classList.remove("is-active--hidemenusp");
-    //   menusp.classList.add("is-active--showmenusp");
-    // }
-    menusp.classList.toggle("is-active--showmenusp");
-  });
-
-  // 2. 3 bars to x mark
-  menubtnsp.addEventListener("click", function () {
-    menubtnsp.classList.toggle("is-active--changemenubtn");
-  });
 });
 
 //validate form
-//validate
 $(document).ready(function () {
   $("#contactForm").validate({
     onfocusout: function (element) {
       this.element(element);
       if (!this.element(element)) {
-        $(".c-feedback__errorall").addClass("is-active");
+        $(".c-feedback__pleasecheck").addClass("is-active");
       } else {
-        $(".c-feedback__errorall").removeClass("is-active");
+        $(".c-feedback__pleasecheck").removeClass("is-active");
       }
     },
     errorClass: "c-feedback__error",
     rules: {
-      fullname: {
+      name: {
         required: true,
       },
-      email: {
+      mail: {
         required: true,
         email: true,
       },
@@ -204,48 +159,34 @@ $(document).ready(function () {
         required: true,
         number: true,
       },
-      contents: {
+      inquiry: {
         required: true,
       },
     },
     messages: {
-      fullname: {
-        required: "縲取ｰ丞錐縲上ｒ蜈･蜉帙＠縺ｦ縺上□縺輔＞縲�",
+      name: {
+        required: "『氏名』を入力してください。",
       },
-      email: {
-        required: "縲弱Γ繝ｼ繝ｫ繧｢繝峨Ξ繧ｹ縲上ｒ蜈･蜉帙＠縺ｦ縺上□縺輔＞縲�",
-        email: "繝｡繝ｼ繝ｫ繧｢繝峨Ξ繧ｹ縺檎┌蜉ｹ縺ｧ縺�",
+      mail: {
+        required: "『メールアドレス』を入力してください。",
+        email: "『メールアドレス』を入力してください。",
       },
       phone: {
-        required: "縲朱崕隧ｱ逡ｪ蜿ｷ縲上ｒ蜈･蜉帙＠縺ｦ縺上□縺輔＞縲�",
-        number: "縲朱崕隧ｱ逡ｪ蜿ｷ縲上ｒ蜈･蜉帙＠縺ｦ縺上□縺輔＞縲�",
+        required: "『電話番号』を入力してください。",
+        number: "『電話番号』を入力してください。",
       },
-      contents: {
-        required: "縲弱♀蝠上＞蜷医ｏ縺帛�螳ｹ縲上ｒ蜈･蜉帙＠縺ｦ縺上□縺輔＞縲�",
+      inquiry: {
+        required: "『お問い合わせ内容』を入力してください。",
       },
     },
   });
 });
 
-//check all field
-$(document).ready(function () {
-  var fullname = $("#fullname").val();
-  var phone = $("#phone").val();
-  var email = $("#email").val();
-  var contents = $("#contents").val();
-  $(".c-secbtn--feedback").click(function () {
-    if (!fullname && !phone && !email && !contents) {
-      $(".c-feedback__errorall").toggleClass("is-active");
-    }
-  });
-});
-
-$(document).ready(function () {
-  $(".c-secbtn--feedback").click(function () {
-    if ($("input.c-feedback__error")) {
-      $(".c-footer").addClass("is-error");
-    } else {
-      $(".c-footer").removeClass("is-error");
-    }
-  });
+$(".c-secbtn--feedback").on("click", function () {
+  $("#contactForm").valid();
+  if (!$("#contactForm").valid()) {
+    $(".c-feedback__pleasecheck").addClass("is-active");
+  } else {
+    $(".c-feedback__pleasecheck").removeClass("is-active");
+  }
 });

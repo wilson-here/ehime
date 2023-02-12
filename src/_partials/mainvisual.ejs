@@ -1,71 +1,47 @@
 <section class="c-mainvisual">
-    <!-- main visual slick start -->
+    <!-- slick start -->
     <div class="c-mainvisual__background">
         <div class="c-mainvisual__slick">
-            <div class="c-mainvisual__slickitem">
-                <picture>
-                    <source media="(max-width: 767px)" srcset="./assets/img/mainvisual/slider1_sp@2x.jpg">
-                    <img src="./assets/img/mainvisual/slider1.jpg" alt="Image Image slider1">
-                </picture>
-            </div>
-            <div class="c-mainvisual__slickitem">
-                <picture>
-                    <source media="(max-width: 767px)" srcset="./assets/img/mainvisual/slider2_sp@2x.jpg">
-                    <img src="./assets/img/mainvisual/slider2.jpg" alt="Image Image slider2">
-                </picture>
-            </div>
-            <div class="c-mainvisual__slickitem">
-                <picture>
-                    <source media="(max-width: 767px)" srcset="./assets/img/mainvisual/slide3_sp@2x.jpg">
-                    <img src="./assets/img/mainvisual/slider3.jpg" alt="Image Image slider3">
-                </picture>
-            </div>
-            <div class="c-mainvisual__slickitem">
-                <picture>
-                    <source media="(max-width: 767px)" srcset="./assets/img/mainvisual/slide4_sp@2x.jpg">
-                    <img src="./assets/img/mainvisual/slider4.jpg" alt="Image Image slider4">
-                </picture>
-            </div>
+            <% slides.forEach(slide=>{ %>
+                <div class="c-mainvisual__slickitem">
+                    <picture>
+                        <source media="(max-width: 767px)"
+                            srcset="./assets/img/mainvisual/slide<%= slide.id %>_sp@2x.jpg">
+                        <img class="c-mainvisual__slickimg" src="./assets/img/mainvisual/slide<%= slide.id %>.jpg"
+                            alt="未来の先輩から生の声が届きました。">
+                    </picture>
+                </div>
+                <% }) %>
         </div>
     </div>
-    <!-- main visual slick end -->
+    <!-- slick end -->
 
     <!-- Home mainvisual start -->
-    <div class="c-mainvisual__content c-mainvisual__content--home">
+    <div id="home" class="c-mainvisual__content c-mainvisual__content--home">
         <div class="c-mainvisual__info l-container l-container--1160px ">
             <h1 class="c-mainvisual__img">
                 <picture>
                     <source media="(max-width: 767px)" srcset="./assets/img/mainvisual/text_background_sp.png">
-                    <img src="./assets/img/mainvisual/text_background.png" alt="Image Image text title">
+                    <img src="./assets/img/mainvisual/text_background.png" alt="未来の先輩から生の声が届きました。">
                 </picture>
             </h1>
-            <p class="c-mainvisual__text"> 2020年卒学生向けの企業紹介サイト </p>
+            <span class="c-mainvisual__text"> 2020年卒学生向けの企業紹介サイト </span>
         </div>
     </div>
     <!-- Home mainvisual end -->
 
-    <!-- About mainvisual start -->
-    <div class="c-mainvisual__content c-mainvisual__content--about">
-
-        <div class="c-mainvisual__info l-container l-container--1160px c-mainvisual__info--about">
-            <h1 class="c-mainvisual__heading">
-                About
-            </h1>
-            <h2 class="c-mainvisual__subheading">愛媛シゴト図鑑とは</h2>
+    <!-- Not-home mainvisual start-->
+    <% pages.forEach(page=> { %>
+        <div id="<%= page.id %>" class="c-mainvisual__content c-mainvisual__content--nothome">
+            <div class="c-mainvisual__info l-container l-container--1160px ">
+                <h1 class="c-mainvisual__heading">
+                    <%= page.heading %>
+                </h1>
+                <span class="c-mainvisual__subheading">
+                    <%= page.subheading %>
+                </span>
+            </div>
         </div>
-    </div>
-    <!-- About mainvisual end -->
-
-    <!-- Contact mainvisual start -->
-    <div class="c-mainvisual__content c-mainvisual__content--contact">
-
-        <div class="c-mainvisual__info l-container l-container--1160px c-mainvisual__info--contact">
-            <h1 class="c-mainvisual__heading">
-                Contact
-            </h1>
-            <h2 class="c-mainvisual__subheading">お問い合わせ</h2>
-        </div>
-    </div>
-    <!-- Contact mainvisual end -->
-
+        <% }) %>
+            <!-- Not-home mainvisual end-->
 </section>

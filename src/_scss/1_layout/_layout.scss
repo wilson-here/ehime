@@ -5,10 +5,10 @@ html {
 }
 
 body {
-    font-family: $main-fonts;
+    font-family: $noto-sans-jp;
     font-size: 1.6rem;
     font-weight: 400;
-    color: $main-color;
+    color: $black;
 
     line-height: 1.5;
     @include sp {

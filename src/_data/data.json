@@ -3,7 +3,7 @@
     "main": [
       {
         "title": "企業一覧",
-        "url": "./"
+        "url": "#"
       },
       {
         "title": "愛媛シゴト図鑑とは",
@@ -11,14 +11,90 @@
       },
       {
         "title": "インタビュー",
-        "url": "./"
+        "url": "#"
       },
       {
         "title": "ニュース",
-        "url": "./"
+        "url": "#"
       }
     ]
   },
+  "pages": [
+    {
+      "id": "about",
+      "heading": "About",
+      "subheading": "愛媛シゴト図鑑とは"
+    },
+    {
+      "id": "contact",
+      "heading": "Contact",
+      "subheading": "お問い合わせ"
+    }
+  ],
+  "slides": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    }
+  ],
+  "pickups": [
+    {
+      "num": 1,
+      "text": "就活コラム",
+      "title": "県内食品業界はもちろん､愛媛全域が盛り上がるようなイベントを。",
+      "message": ""
+    },
+    {
+      "num": 2,
+      "text": "経営者インタビュー",
+      "title": "質の高いサービスを提供 地域の生活を支える企業に",
+      "message": "株式会社フジ　代表取締役社長兼ＣＯＯ"
+    },
+    {
+      "num": 3,
+      "text": "経営者インタビュー",
+      "title": "興味を持ち追求すること それが私の仕事の原動力",
+      "message": "大王海運グループ"
+    },
+    {
+      "num": 4,
+      "text": "",
+      "title": "事前の知識や資格は不要 「お年寄りが好き」で十分",
+      "message": "株式会社悠遊社"
+    },
+    {
+      "num": 5,
+      "text": "",
+      "title": "事前の知識や資格は不要「お年寄りが好き」で十分",
+      "message": "株式会社悠遊社"
+    },
+    {
+      "num": 6,
+      "text": "就活コラム",
+      "title": "他人も巻き込み 一生使える自己分析を",
+      "message": "(株)四国中央キャリア &nbsp; &nbsp;代表取締役"
+    },
+    {
+      "num": 7,
+      "text": "経営者インタビュー",
+      "title": "社会の変化に迅速に対応<br>業種を超えた事業展開も",
+      "message": "(株)愛媛銀行 頭取"
+    },
+    {
+      "num": 4,
+      "text": "",
+      "title": "事前の知識や資格は不要 「お年寄りが好き」で十分",
+      "message": "株式会社悠遊社"
+    }
+  ],
   "companies": [
     {
       "id": 1,
@@ -146,7 +222,7 @@
     {
       "id": 8,
       "heading": "HP",
-      "description": "<a class='c-table__weblink' href='http://www.example.co.jp/'>http://www.example.co.jp/</a>"
+      "description": "<a class='c-table__weblink' href='http://www.example.co.jp/' target='_blank'>http://www.example.co.jp/</a>"
     },
     {
       "id": 9,

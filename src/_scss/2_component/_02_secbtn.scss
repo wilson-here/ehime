@@ -1,97 +1,98 @@
 .c-secbtn {
-    background-color: $secondary-color;
-    height: 60px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 4px 4px $main-color;
-    max-width: 450px;
-    margin: 70px auto 0;
-    box-sizing: border-box;
+  background-color: $teal;
+  box-shadow: 4px 4px $black;
 
+  height: 60px;
+  max-width: 450px;
+  position: relative;
+
+  margin: 70px auto 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  @include sp {
+    height: 38px;
+    margin-top: 117px;
+    box-shadow: 2px 2px $black;
+    width: calc(100% - 20px);
+  }
+
+  &--news {
+    margin-top: 47px;
     @include sp {
-        height: 38px;
-        margin-top: 117px;
-        box-shadow: 2px 2px $main-color;
-        width: calc(100% - 20px);
+      margin-top: 37px;
     }
+  }
 
-    &--news {
-        margin-top: 47px;
-        @include sp {
-            margin-top: 37px;
-        }
+  &--overview {
+    background-color: $white;
+    box-shadow: none;
+    margin-top: calc(25.6% - 70px);
+
+    &:hover {
+      transform: none !important;
+      border: 2px solid #00a99d;
+
+      transition: border 0s;
+
+      .c-secbtn__icon--overview {
+        transform: translateX(2px);
+      }
+    }
+    @include fr1200down {
+      margin-top: 20px;
+    }
+    @include tab {
+      margin-top: 25px;
+      order: 4;
+    }
+  }
+
+  &--feedback {
+    margin-top: 48px;
+  }
+
+  &:hover {
+    transform: translate(4px, 4px);
+    opacity: 1;
+    box-shadow: none;
+
+    .c-secbtn__icon {
+      opacity: 1;
+    }
+  }
+
+  .c-secbtn__text {
+    font-weight: 700;
+    color: $white;
+    letter-spacing: -0.7px;
+    @include sp {
+      font-size: 1.3rem;
     }
 
     &--overview {
-        background-color: $special-color;
-        box-shadow: none;
-        margin-top: calc(25.6% - 70px);
+      color: $teal;
+      @include sp {
+        font-size: 1.4rem;
+      }
+    }
+  }
 
-        &:hover {
-            // opacity: 1;
-            // box-shadow: none;
-            //   transition: box-shadow 0s;
-            transform: none !important;
-            border: 2px solid #00a99d;
+  .c-secbtn__icon {
+    position: absolute;
+    right: 20px;
 
-            transition: border 0s;
-
-            .c-secbtn__icon--overview {
-                transform: translateX(2px);
-            }
-        }
-        @include fr1200down {
-            margin-top: 20px;
-        }
-        @include tab {
-            margin-top: 25px;
-            order: 4;
-        }
+    @include sp {
+      right: 34px;
+      width: 15px;
     }
 
-    &--feedback {
-        margin-top: 50px;
+    &--overview {
+      content: url(../../assets/img/arrow--green.svg);
     }
-
-    &:hover {
-        transform: translate(4px, 4px);
-        opacity: 1;
-        box-shadow: none;
-
-        .c-secbtn__icon {
-            opacity: 1;
-        }
-    }
-
-    .c-secbtn__text {
-        font-weight: 700;
-        color: $special-color;
-        letter-spacing: -0.7px;
-        @include sp {
-            font-size: 1.3rem;
-        }
-
-        &--overview {
-            color: $secondary-color;
-            @include sp {
-                font-size: 1.4rem;
-            }
-        }
-    }
-
-    .c-secbtn__icon {
-        position: absolute;
-        right: 20px;
-
-        @include sp {
-            right: 34px;
-            width: 15px;
-        }
-
-        &--overview {
-            content: url("../.././assets/img/arrow--green.svg");
-        }
-    }
+  }
 }
