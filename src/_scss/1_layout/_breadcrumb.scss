@@ -1,49 +1,55 @@
 .c-breadcrumb {
-  padding: 0 50px;
-  @include sp {
-    margin-top: 70px;
-    padding: 0 15px;
-  }
-
-  .c-breadcrumb__contentwrapper {
-    border-bottom: 1px solid #ccc;
-    padding: 26px 0 33px;
-    font-size: 1.3rem;
+    padding: 0 50px;
     @include sp {
-      padding: 12px 0 13px;
-      font-size: 1rem;
-    }
-  }
-
-  .c-breadcrumb__home {
-    color: $teal;
-    border-bottom: 1px solid $teal;
-    padding: 0 0 3px;
-    @include sp {
-      padding: 0;
-    }
-  }
-
-  .c-breadcrumb__currentpage {
-    margin-left: 40px;
-    font-family: $noto-sans-jp;
-    font-weight: 400;
-    color: #000;
-
-    position: relative;
-    display: none;
-
-    margin-left: 35px;
-    letter-spacing: -0.8px;
-
-    &.is-active {
-      display: inline-block;
+        margin-top: 70px;
+        padding: 0 15px;
     }
 
-    &::before {
-      content: ">";
-      position: absolute;
-      left: -21px;
+    .l-container--1160px {
+        @include tab {
+            max-width: 1920px;
+        }
     }
-  }
+
+    .c-breadcrumb__contentwrapper {
+        border-bottom: 1px solid #ccc;
+        padding: 26px 0 33px;
+        font-size: 1.3rem;
+        @include sp {
+            padding: 12px 0 13px;
+            font-size: 1rem;
+        }
+    }
+
+    .c-breadcrumb__home {
+        color: $teal;
+        border-bottom: 1px solid $teal;
+        padding: 0 0 3px;
+        @include sp {
+            padding: 0;
+        }
+    }
+
+    .c-breadcrumb__currentpage {
+        margin-left: 40px;
+        font-family: $noto-sans-jp;
+        font-weight: 400;
+        color: #000;
+
+        position: relative;
+        display: none;
+
+        margin-left: 35px;
+        letter-spacing: -0.8px;
+
+        &.is-active {
+            display: inline-block;
+        }
+
+        &::before {
+            content: ">";
+            position: absolute;
+            left: -21px;
+        }
+    }
 }

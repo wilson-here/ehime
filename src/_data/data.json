@@ -7,7 +7,7 @@
       },
       {
         "title": "愛媛シゴト図鑑とは",
-        "url": "./about.html"
+        "url": "about.html"
       },
       {
         "title": "インタビュー",
@@ -207,12 +207,12 @@
     {
       "id": 5,
       "heading": "本社所在地",
-      "description": "<p>愛媛県松山市千舟町4丁目5-4　松山千舟454ビル5F</p><p>TEL：<a href='tel:089-947-1411'>089-947-1411</a>　 FAX：089-947-1895</p>"
+      "description": "<p class='c-table__celltxt'>愛媛県松山市千舟町4丁目5-4　松山千舟454ビル5F</p><p>TEL：<a href='tel:089-947-1411'>089-947-1411</a>　 FAX：089-947-1895</p>"
     },
     {
       "id": 6,
       "heading": "事業内容",
-      "description": "週間愛媛経済レポート、愛媛の会社年鑑、 えひめ業界地図等の発行"
+      "description": "<p class='c-table__celltxt'>週間愛媛経済レポート、愛媛の会社年鑑、 えひめ業界地図等の発行</p>"
     },
     {
       "id": 7,
@@ -222,7 +222,7 @@
     {
       "id": 8,
       "heading": "HP",
-      "description": "<a class='c-table__weblink' href='http://www.example.co.jp/' target='_blank'>http://www.example.co.jp/</a>"
+      "description": "<a class='c-table__weblink' href='#' target='_blank'>http://www.example.co.jp/</a>"
     },
     {
       "id": 9,

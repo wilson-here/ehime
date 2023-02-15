@@ -1,5 +1,8 @@
 .c-table {
   margin-top: 12px;
+  @include sp {
+    margin-top: 14px;
+  }
 
   &--info {
     margin-top: 74px;
@@ -48,6 +51,12 @@
           }
         }
       }
+
+      .c-table__header {
+        @include sp {
+          font-size: 1.3rem;
+        }
+      }
     }
 
     &--feedback {
@@ -91,7 +100,7 @@
       align-items: flex-start;
       flex-direction: column;
       justify-content: center;
-      padding: 10px 0;
+      padding: 7px 0;
     }
   }
 
@@ -100,6 +109,10 @@
     @include tab {
       width: 14.7%;
     }
+    @include sp {
+      transform: translateY(-2px);
+      line-height: 1.5;
+    }
 
     &--feedback {
       margin-top: 4px;
@@ -107,6 +120,17 @@
       width: 32.1%;
       @include tab {
         width: 40%;
+        margin-top: 0;
+      }
+      .c-table__headertxt {
+        @include sp {
+          font-size: 1.3rem;
+        }
+      }
+      .c-feedback__required {
+        @include sp {
+          font-size: 1.3rem;
+        }
       }
     }
     @include sp {
@@ -135,7 +159,9 @@
     @include sp {
       font-weight: 500;
       font-size: 1.3rem;
+      line-height: 1.5;
       margin-top: 5px;
+      transform: translateY(-4px);
     }
 
     &--info {
@@ -152,6 +178,12 @@
         flex: 1;
         width: 100%;
       }
+    }
+  }
+
+  .c-table__celltxt {
+    @include tab {
+      line-height: 1.5;
     }
   }
 

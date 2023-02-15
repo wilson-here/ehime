@@ -9,11 +9,10 @@
 
     &:nth-child(1) {
       .c-brief__text {
-        margin-left: 30px;
+        margin-left: 50px;
         padding-right: 27px;
         @include tab {
-          margin-left: 30px;
-          padding-right: 30px;
+          padding-right: 50px;
         }
         @include sp {
           margin-left: 15px;
@@ -30,11 +29,10 @@
       margin-top: 5%;
 
       .c-brief__text {
-        margin-right: 30px;
+        margin-right: 50px;
         padding-left: 27px;
         @include tab {
-          margin-right: 30px;
-          padding-left: 30px;
+          padding-left: 50px;
         }
         @include sp {
           margin-right: 15px;
@@ -62,6 +60,9 @@
 
   .c-brief__textheading {
     font-size: 2rem;
+    @include sp {
+      font-size: 1.8rem;
+    }
   }
 
   .c-brief__textdescription {

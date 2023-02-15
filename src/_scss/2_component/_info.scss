@@ -6,6 +6,9 @@
   }
 
   .l-container--780px {
+    @include tab {
+      max-width: 780px;
+    }
     @include sp {
       max-width: 580px;
     }
@@ -15,6 +18,9 @@
     position: relative;
     max-width: 500px;
     margin: 0 auto;
+    @include sp {
+      max-width: 270px;
+    }
   }
 
   .c-info__quoteiconwrapper {
@@ -25,19 +31,28 @@
       left: 8px;
       top: -16px;
       padding-right: 15px;
+      @include sp {
+        padding-right: 10px;
+        top: -8px;
+      }
     }
 
     &:nth-child(3) {
       right: -3px;
       bottom: -16px;
       padding: 0 15px;
+      @include sp {
+        padding-left: 10px;
+        bottom: -8px;
+      }
     }
   }
 
   .c-info__quoteicon {
     width: 35px;
     @include sp {
-      width: 25px;
+      display: block;
+      width: 20px;
     }
   }
 }

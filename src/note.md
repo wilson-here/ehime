@@ -1,3 +1,9 @@
+// DANG LAM
+
+DONE check thong so design 2nd time
+DONE PP 2nd
+https://docs.google.com/spreadsheets/d/1qpqSrzk6mLiZNbzEsKEY7LOVAO4CFdLrFyAXjjPSOmE/edit?usp=sharing
+
 cd C:\Users\QuangAnh\Desktop\training\workspace\ehime\src
 echo "# exam-Ha_Quang_Anh" >> README.md
 git init
@@ -24,8 +30,11 @@ https://validator.w3.org/nu/
 https://docs.google.com/spreadsheets/d/1qG1xm8r8zogsWXRrF5BtDVX_V67c8Mq-nRhRnqyNG4o/edit?usp=sharing
 
 //old task report
-https://docs.google.com/spreadsheets/d/1Y3IFhNpF12rH26MsI2onM_tKT-1G5RzQIKuwxqxZwvY/edit?usp=sharing
+ban copy note
+https://docs.google.com/spreadsheets/d/1gkcU3ltsPVhb9qwh-W18Lf8Dhj9ibOssHoF9xW7N0IA/edit?usp=sharing
 
+ban copy official
+https://docs.google.com/spreadsheets/d/14vXpcmgzMO2GuGlp3bzgKmboVRj33YFC6-xXOUD4o_0/edit?usp=sharing
 // CAN LAM:
 
 ---
@@ -38,25 +47,20 @@ DONE chinh lai autoplay
 
 DONE check rule
 
-kiem tra co thuoc tinh nao la khong support dc khong? (check cross browser)
+DONE sua validate (all, sua contact) tren server
 
-DANG sua validate link contact vs CSS
-
-check cac loi trong report cu
 loi console
+check cac loi trong report cu
+chinh link: css background img thi phai set link ../../assets/img
+src cua img thi dung ./assets/img
 
-validate
+kiem tra co thuoc tinh nao la khong support dc khong? (check cross browser)
+DONE chan scroll body tren safari iphone
 
+DONE padding top nut sp menu btn tren safari iphone
+
+2nd validate
 CHECK Design lan cuoi & PP
-
-neu co time: hieu ung animation transition cho cac nut / thao tac
-neu co time: CSS organizer
-neu co time: tai sao 1s vao trang web thi css chua load
-neu co time: CHECK web khi ko co css vs luc co css
-
-check Xuyen:
-banner line sp??
-vung phu link cua logo header = full height nav bar
 
 //DONE & chua can thiet
 
@@ -73,7 +77,14 @@ neu co time: tu design lam sao biet ten hieu ung la gi (vd: button over -> hieu 
 neu co time: alt cua 1 hinh ko phai logo ? (vd nhu 3 hinh o overview)
 neu co time: lam the nao de biet hieu ung cua main visual va slider tu design?
 neu co time: hieu ung nao co the tu y them vao de web tro nen dac sac hon. vd: scroll den tung section thi tang opacity va scroll tu duoi len?
+check Xuyen:
+banner line sp??
+vung phu link cua logo header = full height nav bar
 
+neu co time: hieu ung animation transition cho cac nut / thao tac
+neu co time: CSS organizer
+neu co time: tai sao 1s vao trang web thi css chua load
+neu co time: CHECK web khi ko co css vs luc co css
 DONE biet cho nao la back ground img, cho nao la mau??? -> phong to cho nao san sui, cho do la hinh
 DONE logo alt la ten project / text cua logo
 DONE link web example co phai la link ngoai khong? -> yes
@@ -163,3 +174,30 @@ DONE check tester: chữ bị rớt dong? -> ok
 
 //FOOTER
 DONE check tester: opacity cua border right left-block (copy css?) -> ok
+
+//disable scroll cua Huy
+// function disableScroll() {
+// var ycoord = $(window).scrollTop();
+//   $(".c-header__menuspfull").data("ycoord", ycoord);
+//   ycoord = ycoord * -1;
+//   $("body")
+//     .css("position", "fixed")
+//     .css("left", "0px")
+//     .css("right", "0px")
+//     .css("top", ycoord + "px");
+// }
+// function enableScroll() {
+//   $("body")
+//     .css("position", "")
+//     .css("left", "auto")
+//     .css("right", "auto")
+//     .css("top", "auto");
+//   $(window).scrollTop($(".c-header\_\_menuspfull").data("ycoord"));
+// }
+
+// if (menuSpFull.classList.contains("is-active")) {
+// console.log("hihi");
+// disableScroll();
+// } else {
+// enableScroll();
+// }

@@ -1,8 +1,9 @@
 .c-header {
-  position: absolute;
-  z-index: 1;
   width: 100%;
   padding: 0 50px;
+
+  position: absolute;
+  z-index: 1;
   @include tab {
     padding: 0;
   }
@@ -24,18 +25,22 @@
   .c-header__forcompany {
     font-size: 1.4rem;
     color: #fefefe;
-    display: flex;
-    height: 53px;
-    align-items: center;
     font-feature-settings: "palt";
+
+    height: 53px;
+
+    display: flex;
+    align-items: center;
   }
 
   .c-header__logonavinquiry {
-    display: flex;
+    background-color: #fff;
+
     height: 91px;
+
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
     @include tab {
       height: 120px;
     }
@@ -45,10 +50,11 @@
   }
 
   .c-header__navinquiry {
-    display: flex;
-    height: 100%;
-    justify-content: flex-end;
     min-width: 638px;
+    height: 100%;
+
+    display: flex;
+    justify-content: flex-end;
     @include tab {
       min-width: unset;
     }
@@ -69,24 +75,29 @@
 
   .c-header__arrowicon {
     width: 20px;
+
     margin-left: 12px;
   }
 
   .c-header__navlinklists {
-    display: flex;
     font-weight: 700;
+
     width: 100%;
-    justify-content: space-between;
     height: 100%;
+
+    display: flex;
+    justify-content: space-between;
   }
 
   .c-header__inquiry {
     color: #fff;
     font-weight: 700;
     background-color: $teal;
+
     padding: 0 38px;
     margin-left: 23px;
     position: relative;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,8 +118,8 @@
 
     &::before {
       @include tab {
-        font-family: "Font Awesome 5 Free";
         content: "\f0e0";
+        font-family: "Font Awesome 5 Free";
         font-weight: 400;
         font-size: 6rem;
         color: #fff;
@@ -133,6 +144,17 @@
       color: #fff;
       background-color: $teal;
       opacity: 1;
+    }
+
+    &.is-active {
+      color: #fff;
+      background-color: $teal;
+      opacity: 1;
+      pointer-events: none;
+
+      &:hover {
+        cursor: default;
+      }
     }
     @include fr1200down {
       padding: 0 15px;
@@ -168,6 +190,16 @@
       @include tab {
         display: flex;
         z-index: 1;
+      }
+      @media not all and (min-resolution: 0.001dpcm) {
+        @supports (-webkit-appearance: none) {
+          .c-header .c-header__menuspfull.is-active {
+            padding-top: 30px;
+            @include sp {
+              padding-bottom: 46px;
+            }
+          }
+        }
       }
     }
   }
@@ -256,6 +288,8 @@
   }
 
   .c-header__forpub {
+    font-feature-settings: "palt";
+
     @include tab {
       font-size: 3.2rem;
       padding: 4px;
@@ -331,7 +365,9 @@
   }
 
   .c-header__lastblock {
-    padding: 65px 0 0;
+    @include tab {
+      padding: 65px 0;
+    }
     @include sp {
       padding: 25px 0;
     }

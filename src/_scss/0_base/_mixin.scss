@@ -2,13 +2,13 @@
 // clearfix
 //============================================
 @mixin clear {
-  *zoom: 1;
+    *zoom: 1;
 
-  &::after {
-    display: block;
-    content: "";
-    clear: both;
-  }
+    &::after {
+        display: block;
+        content: "";
+        clear: both;
+    }
 }
 
 //============================================
@@ -16,33 +16,33 @@
 //============================================
 
 @mixin sp {
-  @media only screen and (max-width: 767px) {
-    @content;
-  }
+    @media only screen and (max-width: 767px) {
+        @content;
+    }
 }
 
 @mixin tab {
-  @media only screen and (max-width: 1024px) {
-    @content;
-  }
+    @media only screen and (max-width: 1024px) {
+        @content;
+    }
 }
 
 @mixin tabonly {
-  @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    @content;
-  }
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        @content;
+    }
 }
 
 @mixin pconly {
-  @media only screen and (min-width: 1025px) {
-    @content;
-  }
+    @media only screen and (min-width: 1025px) {
+        @content;
+    }
 }
 
 @mixin fr1200down {
-  @media only screen and (max-width: 1200px) {
-    @content;
-  }
+    @media only screen and (max-width: 1200px) {
+        @content;
+    }
 }
 
 //============================================
@@ -50,6 +50,6 @@
 //============================================
 
 @font-face {
-  font-family: "Kozuka Gothic Pr6N";
-  src: url(../../assets/font/KozGoPr6N-Regular.otf);
+    font-family: "Kozuka Gothic Pr6N";
+    src: url("../../assets/font/KozGoPr6N-Regular.otf");
 }

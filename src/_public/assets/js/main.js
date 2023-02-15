@@ -24,23 +24,31 @@ function topFunction() {
 openMenuBtn.addEventListener("click", function () {
   openMenu();
   topFunction();
+  // body.style.position = "fixed";
+  body.style.top = "0px";
 });
 
 closeMenuBtn.addEventListener("click", function () {
   closeMenu();
+  body.style.position = "unset";
+  body.style.top = "unset";
 });
 
 btmMenuClose.addEventListener("click", function () {
   closeMenu();
+  // body.style.position = "unset";
+  body.style.top = "unset";
 });
 
 navBtns.forEach((navBtn) => {
   navBtn.addEventListener("click", function () {
     closeMenu();
+    body.style.position = "unset";
+    body.style.top = "unset";
   });
 });
 
-//mainvisual, breadcrumb content base on page url
+//mainvisual, breadcrumb, content, nav btn active base on page url
 
 var mainvisualContents = document.querySelectorAll(".c-mainvisual__content");
 var mainvisualcontentHome = document.querySelector("#home");
@@ -51,6 +59,14 @@ var lastBreadcrumbs = document.querySelectorAll(".c-breadcrumb__currentpage");
 var breadcrumbAbout = document.querySelector(".c-breadcrumb__about");
 var breadcrumbContact = document.querySelector(".c-breadcrumb__contact");
 
+var navBtnAbout;
+navBtns.forEach((navBtn) => {
+  if (navBtn.innerText == "愛媛シゴト図鑑とは") {
+    navBtnAbout = navBtn;
+    console.log(navBtnAbout);
+  }
+});
+
 function toggleActive(items, itemspecific) {
   items.forEach((item) => {
     item.classList.remove("is-active");
@@ -60,11 +76,13 @@ function toggleActive(items, itemspecific) {
 
 if (main.classList.contains("p-top")) {
   toggleActive(mainvisualContents, mainvisualcontentHome);
+  toggleActive(mainvisualContents, mainvisualcontentHome);
 }
 
 if (main.classList.contains("p-about")) {
   toggleActive(mainvisualContents, mainvisualcontentAbout);
   toggleActive(lastBreadcrumbs, breadcrumbAbout);
+  toggleActive(navBtns, navBtnAbout);
 }
 
 if (main.classList.contains("p-contact")) {
@@ -93,6 +111,7 @@ $(document).ready(function () {
     dots: true,
     infinite: true,
     autoplay: true,
+
     autoplaySpeed: 2000,
     variableWidth: true,
     slidesToShow: 5,
@@ -190,3 +209,7 @@ $(".c-secbtn--feedback").on("click", function () {
     $(".c-feedback__pleasecheck").removeClass("is-active");
   }
 });
+
+document.ontouchmove = function (event) {
+  event.preventDefault();
+};

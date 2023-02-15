@@ -28,7 +28,7 @@
               <% linklists.main && linklists.main.forEach(link=> { %>
                 <li class="c-header__navlinkli">
                   <a class="c-header__navlink u-verticalalign <% if (link.current || link.active) { %>is-active <% } %>"
-                    href=" <%=link.url
+                    href="<%=link.url
                   %>">
                     <%= link.title %>
                   </a>
@@ -104,15 +104,15 @@
       <p class="c-header__phonewrapper">
         <span class="c-header__tel">Tel.</span><a href="tel:089-947-1411" class="c-header__phone">089-947-1411</a>
       </p>
-      <span class="c-header__timeopen u-palt">受付時間9:00〜17:00（平日のみ）</span>
+      <span class="c-header__timeopen u-palt l-container l-container--780px">受付時間9:00〜17:00（平日のみ）</span>
       <!-- tel opentime end -->
     </div>
 
     <!-- last block start -->
     <div class="c-header__lastblock">
       <ul class="c-header__navbtnlist">
-        <li class="c-header__navbtn">
-          <a href="#" class="c-header__navlinksp u-palt c-header__forpub u-palt">掲載・取材のご依頼についてはこちら</a>
+        <li class="c-header__navbtn ">
+          <a href="#" class="c-header__navlinksp c-header__forpub l-container l-container--780px">掲載・取材のご依頼についてはこちら</a>
         </li>
         <li class="c-header__navbtn">
           <a href="#" class="c-header__navlinksp u-palt">プライバシーポリシー</a>

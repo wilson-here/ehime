@@ -4,16 +4,24 @@
   }
   padding: 42px 0 130px;
   @include tab {
-    padding: 42px 0 30px;
+    padding: 42px 50px 30px;
   }
-
-  .c-feedback__contentwrapper {
+  @include sp {
+    padding: 42px 15px 30px;
+  }
+  .l-container--780px {
+    @include tab {
+      max-width: 780px;
+    }
+    @include sp {
+      max-width: 580px;
+    }
   }
 
   .c-feedback__heading {
     text-align: center;
     @include sp {
-      font-size: 2rem;
+      font-size: 1.7rem;
     }
   }
 
@@ -148,7 +156,9 @@
     left: 0;
     height: 17px;
     width: 17px;
-    background-color: #eee;
+
+    border: 1px rgb(194, 194, 194) solid;
+    background-color: rgb(255, 255, 255);
 
     /* Create the checkmark/indicator (hidden when not checked) */
 
@@ -179,6 +189,8 @@
   }
 
   .c-feedback__inputtxt {
+    font-family: $noto-sans-jp;
+
     border: none;
     background: #f2f2f2;
     padding: 0 10px;

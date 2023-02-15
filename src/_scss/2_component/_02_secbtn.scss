@@ -19,12 +19,13 @@
     margin-top: 117px;
     box-shadow: 2px 2px $black;
     width: calc(100% - 20px);
+    max-width: 270px;
   }
 
   &--news {
     margin-top: 47px;
     @include sp {
-      margin-top: 37px;
+      margin-top: 36px;
     }
   }
 
